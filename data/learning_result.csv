@@ -1,0 +1,10 @@
+dataset,model,accuracy,hidden_layers,hidden_nodes_per_layer,dropout,weight_decay,learning_rate,seed,max_order
+cora,gcn,86.6,1,16,0.5,5.00E-04,0.01,123,
+cora,gcn_cheby,86.8,1,16,0.5,5.00E-04,0.01,123,3
+cora,dense,85.2,3,32,0.5,5.00E-04,0.01,234,
+citesser,gcn,77.7,1,16,0.5,5.00E-04,0.01,123,
+citesser,gcn_cheby,77.3,1,16,0.5,5.00E-04,0.01,123,3
+citeseer,dense,76,3,32,0.5,5.00E-04,0.01,234,
+pubmed,gcn,86.8,1,16,0.5,5.00E-04,0.01,123,
+pubmed,gcn_cheby,89.4,2,32,0.5,5.00E-04,0.05,123,1
+pubmed,dense,88.1,2,16,0.5,5.00E-04,0.07,123,
