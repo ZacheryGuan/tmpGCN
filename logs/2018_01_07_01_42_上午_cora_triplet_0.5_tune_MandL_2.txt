@@ -1,0 +1,3897 @@
+Namespace(dataset='cora', loss_func=None, repeating=10, train_size=0.5, validate=None, verbose=False, ws_beta=None)
+{   'default': {   'Model': 0,
+                   'Model11': 'nearest',
+                   'Model19': 'union',
+                   'Model_to_add_label': {'Model': 0},
+                   'Model_to_predict': {'Model': 0},
+                   'absorption_type': 'binary',
+                   'alpha': 1e-06,
+                   'beta': 0.05,
+                   'classifier': 'svm',
+                   'connection': 'cc',
+                   'conv': 'gcn',
+                   'dataset': 'cora',
+                   'drop_inter_class_edge': False,
+                   'dropout': 0.5,
+                   'early_stopping': 0,
+                   'epochs': 200,
+                   'feature': 'bow',
+                   'gamma': 1e-05,
+                   'k': -1,
+                   'lambda': 0,
+                   'layer_size': [16],
+                   'learning_rate': 0.02,
+                   'logdir': '',
+                   'logging': False,
+                   'loss_func': 'default',
+                   'max_degree': 2,
+                   'max_triplet': 1000,
+                   'mu': 1,
+                   'name': '',
+                   'poly_parameters': [1, -2, 1],
+                   'random_seed': 1515260574,
+                   'smoothing': None,
+                   'svm_degree': 4,
+                   'svm_kernel': 'rbf',
+                   't': 500,
+                   't2': 100,
+                   'taubin_f': 0.7,
+                   'taubin_lambda': 0.3,
+                   'taubin_mu': -0.31,
+                   'taubin_repeat': 5,
+                   'taubin_t': 0.2,
+                   'threads': 64,
+                   'train': True,
+                   'train_size': 0.5,
+                   'tree_depth': None,
+                   'validate': False,
+                   'validation_size': 20,
+                   'weight_decay': 0.0005,
+                   'ws_beta': 20},
+    'model_list': [   {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 0.5},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 3},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 0.5},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 3},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 0.5},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 3},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 4.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 0.5},
+                      {   'MARGIN': 4.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 4.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 3},
+                      {   'MARGIN': 4.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 4.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 6.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 0.5},
+                      {   'MARGIN': 6.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 6.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 3},
+                      {   'MARGIN': 6.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 6.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {'Model': 0, 'connection': 'cc', 'conv': 'gcn'}],
+    'repeating': 10}
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.04838 accuracy= 0.32600 time= 0.01720
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.15384614, 0.0]
+Total time=7.988279819488525s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.71225 accuracy= 0.44400 time= 0.01078
+accuracy of each class= [0.028571429, 0.0, 0.26582277, 0.93333358, 0.19354838, 0.72307682, 0.0]
+Total time=8.224355220794678s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.84374 accuracy= 0.44400 time= 0.01351
+accuracy of each class= [0.11428571, 0.0, 0.1392405, 0.96666688, 0.24193548, 0.66153836, 0.0]
+Total time=8.737337827682495s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.84255 accuracy= 0.45600 time= 0.01130
+accuracy of each class= [0.071428575, 0.0, 0.17721519, 0.90000027, 0.096774191, 0.73846149, 0.60606056]
+Total time=8.547996520996094s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.92342 accuracy= 0.45000 time= 0.02053
+accuracy of each class= [0.17142858, 0.0, 0.0, 0.86000013, 0.29032257, 0.67692304, 0.66666663]
+Total time=8.640368700027466s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.68651 accuracy= 0.43600 time= 0.01362
+accuracy of each class= [0.042857144, 0.0, 0.24050632, 0.9466669, 0.080645159, 0.75384605, 0.0]
+Total time=8.945049047470093s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.70185 accuracy= 0.32400 time= 0.01509
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.13846153, 0.0]
+Total time=9.424579381942749s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.85093 accuracy= 0.49000 time= 0.01213
+accuracy of each class= [0.15714285, 0.0, 0.30379745, 0.89333355, 0.40322584, 0.78461534, 0.0]
+Total time=9.395236253738403s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.91414 accuracy= 0.48000 time= 0.01195
+accuracy of each class= [0.28571427, 0.0, 0.012658227, 0.88666683, 0.41935486, 0.63076919, 0.5757575]
+Total time=9.786738872528076s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.92897 accuracy= 0.44400 time= 0.01323
+accuracy of each class= [0.35714287, 0.0, 0.025316454, 0.70000011, 0.33870968, 0.75384605, 0.6060605]
+Total time=9.610999584197998s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.89838 accuracy= 0.32600 time= 0.01537
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.15384614, 0.0]
+Total time=9.888751983642578s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.76767 accuracy= 0.44800 time= 0.01806
+accuracy of each class= [0.042857144, 0.0, 0.24050632, 0.92666692, 0.24193548, 0.73846149, 0.0]
+Total time=10.088332891464233s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.91418 accuracy= 0.44600 time= 0.01581
+accuracy of each class= [0.14285713, 0.0, 0.20253164, 0.70000011, 0.6129033, 0.83076918, 0.0]
+Total time=9.59547734260559s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.88393 accuracy= 0.47200 time= 0.01403
+accuracy of each class= [0.071428575, 0.0, 0.15189873, 0.85333353, 0.37096775, 0.67692304, 0.72727263]
+Total time=9.816679000854492s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.94876 accuracy= 0.44400 time= 0.01759
+accuracy of each class= [0.30000001, 0.12195121, 0.1392405, 0.58000004, 0.53225809, 0.78461534, 0.42424238]
+Total time=10.468378067016602s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 3.89838 accuracy= 0.32600 time= 0.01331
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.15384614, 0.0]
+Total time=11.446324110031128s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 5.90185 accuracy= 0.32400 time= 0.02849
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.13846153, 0.0]
+Total time=12.187766313552856s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.85683 accuracy= 0.48000 time= 0.01895
+accuracy of each class= [0.071428575, 0.56097555, 0.11392405, 0.88000017, 0.48387098, 0.63076913, 0.0]
+Total time=12.17445182800293s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.97857 accuracy= 0.45000 time= 0.02530
+accuracy of each class= [0.099999994, 0.0, 0.17721517, 0.71333349, 0.45161292, 0.69230765, 0.72727269]
+Total time=12.269152641296387s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.03806 accuracy= 0.47000 time= 0.02346
+accuracy of each class= [0.31428573, 0.51219511, 0.063291132, 0.70666677, 0.51612908, 0.70769221, 0.090909079]
+Total time=12.457093715667725s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 4.89838 accuracy= 0.32600 time= 0.01413
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.15384614, 0.0]
+Total time=12.271061658859253s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 7.90185 accuracy= 0.32400 time= 0.01324
+accuracy of each class= [0.028571429, 0.0, 0.012658227, 0.99333358, 0.016129032, 0.13846153, 0.0]
+Total time=15.066554307937622s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.92220 accuracy= 0.54000 time= 0.04341
+accuracy of each class= [0.057142857, 0.53658533, 0.51898724, 0.72000009, 0.59677428, 0.81538451, 0.15151513]
+Total time=19.891240119934082s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.09342 accuracy= 0.42000 time= 0.04083
+accuracy of each class= [0.042857144, 0.0, 0.21518986, 0.66666675, 0.40322584, 0.63076919, 0.72727263]
+Total time=20.30085301399231s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.19676 accuracy= 0.35600 time= 0.06174
+accuracy of each class= [0.057142857, 0.024390245, 0.0, 0.54000002, 0.38709676, 0.70769221, 0.66666663]
+Total time=19.963618516921997s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 4 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.65671 accuracy= 0.46600 time= 0.03552
+accuracy of each class= [0.071428575, 0.0, 0.30379745, 0.92666692, 0.24193548, 0.76923066, 0.0]
+Total time=19.404823303222656s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.86759 accuracy= 0.53600 time= 0.02370
+accuracy of each class= [0.0, 0.0, 0.91666657, 0.73880607, 0.23809521, 0.8852458, 0.72500002]
+Total time=20.270984411239624s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.19233 accuracy= 0.39600 time= 0.01358
+accuracy of each class= [0.015384614, 0.0, 0.18055557, 0.78358233, 0.035714284, 0.72131139, 0.80000007]
+Total time=19.095664262771606s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.77444 accuracy= 0.57200 time= 0.02216
+accuracy of each class= [0.015384614, 0.0, 0.88888878, 0.75373143, 0.48809525, 0.77049178, 0.80000007]
+Total time=20.546690702438354s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.90073 accuracy= 0.47800 time= 0.02642
+accuracy of each class= [0.015384614, 0.0, 0.9444443, 0.70149261, 0.22619048, 0.93442607, 0.0]
+Total time=19.15732979774475s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.84111 accuracy= 0.60200 time= 0.05596
+accuracy of each class= [0.0, 0.15909092, 0.97222209, 0.83582109, 0.41666663, 0.7540983, 0.7750001]
+Total time=20.607524394989014s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.87856 accuracy= 0.53000 time= 0.02049
+accuracy of each class= [0.0, 0.0, 0.9305554, 0.72388071, 0.22619048, 0.91803265, 0.65000004]
+Total time=20.70501685142517s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.67978 accuracy= 0.57600 time= 0.01773
+accuracy of each class= [0.015384614, 0.0, 0.83333325, 0.76865685, 0.5, 0.83606553, 0.7750001]
+Total time=20.17520833015442s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 4.18510 accuracy= 0.32600 time= 0.04240
+accuracy of each class= [0.18461537, 0.0, 0.125, 0.69402993, 0.035714284, 0.21311475, 0.82500005]
+Total time=19.584532260894775s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.86057 accuracy= 0.48800 time= 0.03063
+accuracy of each class= [0.0, 0.0, 0.97222209, 0.619403, 0.40476191, 0.90163928, 0.049999997]
+Total time=20.411831617355347s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.90916 accuracy= 0.46200 time= 0.02470
+accuracy of each class= [0.0, 0.0, 0.97222209, 0.41044778, 0.52380955, 0.86885232, 0.22499999]
+Total time=20.372918128967285s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.86492 accuracy= 0.55200 time= 0.02361
+accuracy of each class= [0.015384614, 0.0, 0.9444443, 0.74626875, 0.29761904, 0.91803265, 0.65000004]
+Total time=20.40098237991333s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.69037 accuracy= 0.58200 time= 0.02425
+accuracy of each class= [0.015384614, 0.0, 0.84722209, 0.77611953, 0.51190472, 0.83606553, 0.7750001]
+Total time=20.171393871307373s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 7.78510 accuracy= 0.32600 time= 0.01691
+accuracy of each class= [0.18461537, 0.0, 0.125, 0.69402993, 0.035714284, 0.21311475, 0.82500005]
+Total time=20.034085273742676s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89569 accuracy= 0.54800 time= 0.06154
+accuracy of each class= [0.0, 0.0, 0.9444443, 0.67164189, 0.44047621, 0.86885232, 0.65000004]
+Total time=21.065657138824463s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.03448 accuracy= 0.45800 time= 0.04368
+accuracy of each class= [0.0, 0.0, 0.97222209, 0.50746268, 0.65476191, 0.55737704, 0.049999997]
+Total time=20.49178409576416s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89202 accuracy= 0.55400 time= 0.02498
+accuracy of each class= [0.030769229, 0.0, 0.9444443, 0.71641797, 0.35714284, 0.91803265, 0.625]
+Total time=19.926568269729614s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 5.89233 accuracy= 0.39600 time= 0.06532
+accuracy of each class= [0.015384614, 0.0, 0.18055557, 0.78358233, 0.035714284, 0.72131139, 0.80000007]
+Total time=20.013367176055908s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89407 accuracy= 0.57600 time= 0.03232
+accuracy of each class= [0.0, 0.0, 0.98611093, 0.71641797, 0.48809525, 0.78688514, 0.80000007]
+Total time=20.258686542510986s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.07517 accuracy= 0.47000 time= 0.04079
+accuracy of each class= [0.0, 0.0, 0.98611093, 0.62686568, 0.21428572, 0.90163928, 0.17499998]
+Total time=20.585012912750244s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 41.72174 accuracy= 0.30000 time= 0.02067
+accuracy of each class= [0.35384613, 0.0, 0.097222216, 0.5820896, 0.13095237, 0.016393444, 0.75000006]
+Total time=20.244722843170166s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.94305 accuracy= 0.53400 time= 0.02763
+accuracy of each class= [0.030769229, 0.0, 0.91666657, 0.62686568, 0.40476191, 0.91803265, 0.625]
+Total time=20.113081693649292s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 7.89233 accuracy= 0.39600 time= 0.08429
+accuracy of each class= [0.015384614, 0.0, 0.18055557, 0.78358233, 0.035714284, 0.72131139, 0.80000007]
+Total time=20.612847328186035s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 19.78510 accuracy= 0.32600 time= 0.06390
+accuracy of each class= [0.18461537, 0.0, 0.125, 0.69402993, 0.035714284, 0.21311475, 0.82500005]
+Total time=19.790157556533813s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.24527 accuracy= 0.42200 time= 0.03548
+accuracy of each class= [0.0, 0.0, 0.97222209, 0.50746268, 0.10714284, 0.91803265, 0.19999999]
+Total time=20.1247136592865s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 61.72173 accuracy= 0.30000 time= 0.05638
+accuracy of each class= [0.35384613, 0.0, 0.097222216, 0.5820896, 0.13095237, 0.016393444, 0.75000006]
+Total time=19.86555576324463s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 1 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89873 accuracy= 0.52200 time= 0.04061
+accuracy of each class= [0.0, 0.0, 0.86111104, 0.77611953, 0.13095237, 0.8852458, 0.75000006]
+Total time=18.97717809677124s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.05730 accuracy= 0.36600 time= 0.01284
+accuracy of each class= [0.34848481, 0.62790704, 0.92405063, 0.11034485, 0.56716418, 0.098360658, 0.0]
+Total time=20.850239515304565s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.13920 accuracy= 0.35000 time= 0.04581
+accuracy of each class= [0.36363634, 0.41860467, 0.91139239, 0.10344828, 0.56716418, 0.13114755, 0.0]
+Total time=20.02949357032776s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.49214 accuracy= 0.28800 time= 0.03332
+accuracy of each class= [0.83333325, 0.069767445, 0.73417717, 0.062068969, 0.25373134, 0.032786887, 0.0]
+Total time=20.01117730140686s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.01036 accuracy= 0.36800 time= 0.03831
+accuracy of each class= [0.66666663, 0.13953489, 0.93670887, 0.14482759, 0.34328359, 0.26229507, 0.0]
+Total time=20.305155038833618s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.94299 accuracy= 0.52000 time= 0.01993
+accuracy of each class= [0.13636363, 0.6511628, 0.94936717, 0.54482764, 0.34328359, 0.32786888, 0.66666675]
+Total time=19.426050901412964s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.30729 accuracy= 0.36600 time= 0.03464
+accuracy of each class= [0.34848481, 0.62790704, 0.92405063, 0.11034485, 0.56716418, 0.098360658, 0.0]
+Total time=20.136515855789185s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.63920 accuracy= 0.35000 time= 0.02244
+accuracy of each class= [0.36363634, 0.41860467, 0.91139239, 0.10344828, 0.56716418, 0.13114755, 0.0]
+Total time=19.906779050827026s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.99005 accuracy= 0.28800 time= 0.01844
+accuracy of each class= [0.83333325, 0.069767445, 0.73417717, 0.062068969, 0.25373134, 0.032786887, 0.0]
+Total time=20.0060555934906s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.07202 accuracy= 0.34400 time= 0.03111
+accuracy of each class= [0.15151513, 0.79069775, 0.83544302, 0.13103451, 0.41791046, 0.24590163, 0.0]
+Total time=20.930533170700073s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.07803 accuracy= 0.40400 time= 0.06879
+accuracy of each class= [0.19696969, 0.72093028, 0.91139239, 0.20000002, 0.37313434, 0.1147541, 0.64102572]
+Total time=20.10702085494995s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.90730 accuracy= 0.36600 time= 0.01865
+accuracy of each class= [0.34848481, 0.62790704, 0.92405063, 0.11034485, 0.56716418, 0.098360658, 0.0]
+Total time=20.19589853286743s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.83920 accuracy= 0.35000 time= 0.03136
+accuracy of each class= [0.36363634, 0.41860467, 0.91139239, 0.10344828, 0.56716418, 0.13114755, 0.0]
+Total time=19.47979760169983s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 7.59005 accuracy= 0.28800 time= 0.02023
+accuracy of each class= [0.83333325, 0.069767445, 0.73417717, 0.062068969, 0.25373134, 0.032786887, 0.0]
+Total time=19.96820878982544s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.21943 accuracy= 0.32400 time= 0.03505
+accuracy of each class= [0.1212121, 0.88372093, 0.75949365, 0.16551726, 0.26865673, 0.098360658, 0.20512821]
+Total time=20.349799871444702s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.22765 accuracy= 0.38800 time= 0.02586
+accuracy of each class= [0.13636363, 0.76744193, 0.81012654, 0.096551731, 0.38805971, 0.34426227, 0.69230777]
+Total time=20.335847854614258s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.90729 accuracy= 0.36600 time= 0.02870
+accuracy of each class= [0.34848481, 0.62790704, 0.92405063, 0.11034485, 0.56716418, 0.098360658, 0.0]
+Total time=19.975478410720825s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 5.83920 accuracy= 0.35000 time= 0.05540
+accuracy of each class= [0.36363634, 0.41860467, 0.91139239, 0.10344828, 0.56716418, 0.13114755, 0.0]
+Total time=20.9127254486084s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 13.59005 accuracy= 0.28800 time= 0.02481
+accuracy of each class= [0.83333325, 0.069767445, 0.73417717, 0.062068969, 0.25373134, 0.032786887, 0.0]
+Total time=20.132933139801025s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.34651 accuracy= 0.35800 time= 0.02893
+accuracy of each class= [0.16666664, 0.76744193, 0.75949365, 0.20000002, 0.17910449, 0.13114755, 0.66666675]
+Total time=20.611127853393555s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.49994 accuracy= 0.30200 time= 0.02968
+accuracy of each class= [0.13636363, 0.72093028, 0.75949365, 0.027586209, 0.26865673, 0.0, 0.74358982]
+Total time=20.382858276367188s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 4.90729 accuracy= 0.36600 time= 0.02299
+accuracy of each class= [0.34848481, 0.62790704, 0.92405063, 0.11034485, 0.56716418, 0.098360658, 0.0]
+Total time=19.901910066604614s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 7.83920 accuracy= 0.35000 time= 0.02457
+accuracy of each class= [0.36363634, 0.41860467, 0.91139239, 0.10344828, 0.56716418, 0.13114755, 0.0]
+Total time=20.15781569480896s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 19.59005 accuracy= 0.28800 time= 0.01715
+accuracy of each class= [0.83333325, 0.069767445, 0.73417717, 0.062068969, 0.25373134, 0.032786887, 0.0]
+Total time=19.736405611038208s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.49788 accuracy= 0.31000 time= 0.02391
+accuracy of each class= [0.18181816, 0.88372093, 0.73417717, 0.14482759, 0.20895523, 0.098360658, 0.15384616]
+Total time=19.732256174087524s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.57943 accuracy= 0.27200 time= 0.01697
+accuracy of each class= [0.13636363, 0.3255814, 0.75949365, 0.020689655, 0.28358209, 0.032786887, 0.74358982]
+Total time=18.914015531539917s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 3 3 2 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.94140 accuracy= 0.37600 time= 0.02433
+accuracy of each class= [0.21212119, 0.27906978, 0.96202528, 0.10344828, 0.74626869, 0.34426227, 0.0]
+Total time=19.998724937438965s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.92796 accuracy= 0.47000 time= 0.03231
+accuracy of each class= [0.0, 0.0, 0.67532462, 0.72151911, 0.87878782, 0.0, 0.4782609]
+Total time=20.254927158355713s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.95143 accuracy= 0.45600 time= 0.04380
+accuracy of each class= [0.0, 0.0, 0.76623374, 0.61392415, 0.90909082, 0.0, 0.52173913]
+Total time=19.54271101951599s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.91228 accuracy= 0.45800 time= 0.04233
+accuracy of each class= [0.0, 0.0, 0.87012982, 0.56962031, 0.93939382, 0.073529407, 0.21739131]
+Total time=20.132834911346436s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.97272 accuracy= 0.49000 time= 0.03527
+accuracy of each class= [0.0, 0.4358975, 0.71428567, 0.32911387, 0.86363626, 0.86764711, 0.21739131]
+Total time=20.289517164230347s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 4.57839 accuracy= 0.44600 time= 0.02740
+accuracy of each class= [0.0, 0.28205127, 0.79220766, 0.72151911, 0.40909088, 0.0, 0.43478262]
+Total time=20.069591522216797s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.88146 accuracy= 0.47000 time= 0.01795
+accuracy of each class= [0.0, 0.0, 0.54545444, 0.71518993, 0.90909082, 0.19117646, 0.30434784]
+Total time=19.09293246269226s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.96225 accuracy= 0.47000 time= 0.01659
+accuracy of each class= [0.0, 0.0, 0.75324667, 0.65189886, 0.92424232, 0.073529407, 0.34782609]
+Total time=19.135722398757935s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 4.06096 accuracy= 0.45000 time= 0.02520
+accuracy of each class= [0.0, 0.0, 0.89610374, 0.75316465, 0.39393938, 0.0, 0.4782609]
+Total time=20.897363424301147s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.00700 accuracy= 0.47400 time= 0.02396
+accuracy of each class= [0.0, 0.74358982, 0.63636357, 0.26582277, 0.89393932, 0.77941173, 0.21739131]
+Total time=20.51241445541382s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.08173 accuracy= 0.37800 time= 0.02559
+accuracy of each class= [0.014492753, 0.89743608, 0.75324667, 0.30379742, 0.62121212, 0.0, 0.26086956]
+Total time=18.27511739730835s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.99078 accuracy= 0.48400 time= 0.01611
+accuracy of each class= [0.0, 0.0, 0.76623374, 0.71518999, 0.89393932, 0.0, 0.4782609]
+Total time=17.72311568260193s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.07537 accuracy= 0.48000 time= 0.05930
+accuracy of each class= [0.0, 0.0, 0.84415567, 0.65189886, 0.92424232, 0.058823526, 0.30434784]
+Total time=18.48444676399231s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.01628 accuracy= 0.44200 time= 0.03398
+accuracy of each class= [0.0, 0.89743608, 0.80519474, 0.35443032, 0.86363626, 0.073529407, 0.26086956]
+Total time=20.601144313812256s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 11.93277 accuracy= 0.36000 time= 0.02165
+accuracy of each class= [0.014492753, 0.051282052, 0.32467529, 0.7911393, 0.31818181, 0.0, 0.26086956]
+Total time=19.855846643447876s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 21.57839 accuracy= 0.44600 time= 0.01788
+accuracy of each class= [0.0, 0.28205127, 0.79220766, 0.72151911, 0.40909088, 0.0, 0.43478262]
+Total time=20.018422603607178s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.00801 accuracy= 0.49200 time= 0.06605
+accuracy of each class= [0.0, 0.0, 0.68831164, 0.74050641, 0.92424232, 0.14705881, 0.21739131]
+Total time=20.21418833732605s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.97512 accuracy= 0.52200 time= 0.02021
+accuracy of each class= [0.0, 0.0, 0.83116871, 0.47468352, 0.86363626, 0.86764699, 0.26086956]
+Total time=20.210063219070435s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 13.66096 accuracy= 0.45000 time= 0.02513
+accuracy of each class= [0.0, 0.0, 0.89610374, 0.75316465, 0.39393938, 0.0, 0.4782609]
+Total time=20.82131552696228s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 21.93276 accuracy= 0.36000 time= 0.01852
+accuracy of each class= [0.014492753, 0.051282052, 0.32467529, 0.7911393, 0.31818181, 0.0, 0.26086956]
+Total time=20.275267839431763s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 41.57838 accuracy= 0.44600 time= 0.01602
+accuracy of each class= [0.0, 0.28205127, 0.79220766, 0.72151911, 0.40909088, 0.0, 0.43478262]
+Total time=20.40677547454834s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.15274 accuracy= 0.48600 time= 0.02895
+accuracy of each class= [0.0, 0.0, 0.90909082, 0.67721528, 0.92424232, 0.0, 0.21739131]
+Total time=20.7336585521698s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.48571 accuracy= 0.39400 time= 0.03535
+accuracy of each class= [0.0, 0.0, 0.7792207, 0.43670881, 0.93939382, 0.0, 0.26086956]
+Total time=19.115631341934204s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 19.66097 accuracy= 0.45000 time= 0.06898
+accuracy of each class= [0.0, 0.0, 0.89610374, 0.75316465, 0.39393938, 0.0, 0.4782609]
+Total time=20.619102716445923s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 31.93277 accuracy= 0.36000 time= 0.05413
+accuracy of each class= [0.014492753, 0.051282052, 0.32467529, 0.7911393, 0.31818181, 0.0, 0.26086956]
+Total time=19.83710289001465s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 61.57839 accuracy= 0.44600 time= 0.02274
+accuracy of each class= [0.0, 0.28205127, 0.79220766, 0.72151911, 0.40909088, 0.0, 0.43478262]
+Total time=19.688182830810547s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 3 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89824 accuracy= 0.42800 time= 0.01938
+accuracy of each class= [0.0, 0.0, 0.4675324, 0.7911393, 0.63636357, 0.0, 0.4782609]
+Total time=20.49803352355957s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.62817 accuracy= 0.60800 time= 0.02686
+accuracy of each class= [0.77049178, 0.77777773, 0.68674695, 0.557823, 0.47945207, 0.83076918, 0.028571429]
+Total time=19.714086294174194s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.87190 accuracy= 0.52800 time= 0.01662
+accuracy of each class= [0.80327857, 0.8611111, 0.0, 0.557823, 0.58904111, 0.52307689, 0.71428573]
+Total time=20.793525218963623s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89184 accuracy= 0.50800 time= 0.04638
+accuracy of each class= [0.77049178, 0.80555552, 0.0, 0.72789091, 0.01369863, 0.73846143, 0.62857139]
+Total time=20.52327537536621s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.88894 accuracy= 0.45400 time= 0.02551
+accuracy of each class= [0.90163928, 0.66666669, 0.0, 0.71428549, 0.0, 0.66153836, 0.0]
+Total time=19.681134939193726s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.86084 accuracy= 0.62800 time= 0.05844
+accuracy of each class= [0.86885232, 0.69444442, 0.87951803, 0.68027186, 0.0, 0.70769221, 0.48571426]
+Total time=21.354944705963135s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.68616 accuracy= 0.61800 time= 0.01746
+accuracy of each class= [0.77049178, 0.77777773, 0.71084332, 0.5170067, 0.60273969, 0.83076918, 0.028571429]
+Total time=20.198589324951172s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.86106 accuracy= 0.47800 time= 0.03002
+accuracy of each class= [0.73770481, 0.72222227, 0.0, 0.4829931, 0.5479452, 0.87692302, 0.0]
+Total time=19.670088052749634s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.65610 accuracy= 0.41600 time= 0.03254
+accuracy of each class= [0.78688514, 0.0, 0.0, 0.86394513, 0.0, 0.50769222, 0.0]
+Total time=21.30381202697754s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 3.13934 accuracy= 0.38800 time= 0.03743
+accuracy of each class= [0.73770481, 0.055555556, 0.0, 0.89115602, 0.0, 0.24615383, 0.0]
+Total time=18.69312286376953s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.94969 accuracy= 0.55800 time= 0.04547
+accuracy of each class= [0.85245889, 0.3611111, 0.97590363, 0.58503389, 0.0, 0.72307682, 0.0]
+Total time=21.44175672531128s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.65786 accuracy= 0.61200 time= 0.02522
+accuracy of each class= [0.81967205, 0.77777773, 0.67469883, 0.54421759, 0.5479452, 0.78461534, 0.028571429]
+Total time=20.889033317565918s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.18278 accuracy= 0.45800 time= 0.02288
+accuracy of each class= [0.72131139, 0.72222221, 0.0, 0.85714251, 0.19178082, 0.29230765, 0.0]
+Total time=19.893988132476807s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.05285 accuracy= 0.46200 time= 0.02928
+accuracy of each class= [0.91803265, 0.6388889, 0.0, 0.65306103, 0.01369863, 0.79999989, 0.085714288]
+Total time=20.260722160339355s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.09258 accuracy= 0.42200 time= 0.02470
+accuracy of each class= [0.60655731, 0.027777778, 0.0, 0.84353703, 0.0, 0.73846143, 0.028571429]
+Total time=19.263301610946655s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.11678 accuracy= 0.48600 time= 0.03585
+accuracy of each class= [0.032786887, 0.0, 0.98795182, 0.75510174, 0.0, 0.73846143, 0.0]
+Total time=20.17980718612671s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.71589 accuracy= 0.59400 time= 0.02745
+accuracy of each class= [0.73770481, 0.69444442, 0.67469883, 0.53741485, 0.47945207, 0.86153835, 0.028571429]
+Total time=20.52883505821228s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.93596 accuracy= 0.49400 time= 0.04202
+accuracy of each class= [0.81967205, 0.75, 0.0, 0.63945562, 0.27397263, 0.76923066, 0.17142858]
+Total time=20.607463121414185s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 5.68547 accuracy= 0.39000 time= 0.01520
+accuracy of each class= [0.7540983, 0.0, 0.0, 0.88435334, 0.0, 0.29230765, 0.0]
+Total time=21.273284912109375s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.21175 accuracy= 0.40400 time= 0.03343
+accuracy of each class= [0.47540981, 0.0, 0.0, 0.83673429, 0.01369863, 0.73846143, 0.028571429]
+Total time=19.912036657333374s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.27476 accuracy= 0.47800 time= 0.02757
+accuracy of each class= [0.0, 0.0, 0.92771083, 0.88435334, 0.01369863, 0.44615379, 0.057142857]
+Total time=20.059973001480103s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.77096 accuracy= 0.55000 time= 0.03777
+accuracy of each class= [0.72131139, 0.6388889, 0.74698794, 0.37414962, 0.45205477, 0.87692302, 0.028571429]
+Total time=19.876623392105103s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.93661 accuracy= 0.49400 time= 0.02280
+accuracy of each class= [0.8852458, 0.72222227, 0.0, 0.64625829, 0.27397263, 0.73846143, 0.11428571]
+Total time=20.51468253135681s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.39064 accuracy= 0.37600 time= 0.02810
+accuracy of each class= [0.90163928, 0.0, 0.0, 0.59183657, 0.0, 0.70769221, 0.0]
+Total time=20.119410753250122s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.70071 accuracy= 0.40800 time= 0.02113
+accuracy of each class= [0.52459013, 0.0, 0.0, 0.84353703, 0.0, 0.73846143, 0.0]
+Total time=20.130039930343628s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.50909 accuracy= 0.36600 time= 0.02029
+accuracy of each class= [0.0, 0.0, 0.98795182, 0.59183657, 0.0, 0.19999999, 0.028571429]
+Total time=20.272197723388672s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 1 2 2 3 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.83839 accuracy= 0.50800 time= 0.03086
+accuracy of each class= [0.8852458, 0.80555552, 0.55421686, 0.66666645, 0.1780822, 0.21538459, 0.0]
+Total time=19.509843587875366s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.98166 accuracy= 0.40800 time= 0.07878
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.56849319, 0.73134327, 0.20408164, 0.6875]
+Total time=20.530572652816772s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.02565 accuracy= 0.35800 time= 0.04522
+accuracy of each class= [0.0, 0.85714287, 0.0, 0.44520548, 0.64179105, 0.20408164, 0.78125]
+Total time=19.80566167831421s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.03793 accuracy= 0.31200 time= 0.01979
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.46575341, 0.25373134, 0.22448981, 0.625]
+Total time=20.591005563735962s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.01186 accuracy= 0.38000 time= 0.02171
+accuracy of each class= [0.0, 0.97619051, 0.0, 0.7054795, 0.41791046, 0.30612245, 0.09375]
+Total time=20.22985005378723s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.03676 accuracy= 0.35400 time= 0.02823
+accuracy of each class= [0.0, 0.97619051, 0.0, 0.68493158, 0.31343284, 0.22448981, 0.125]
+Total time=20.29765820503235s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.13947 accuracy= 0.40400 time= 0.02482
+accuracy of each class= [0.0, 0.90476191, 0.0, 0.56164384, 0.71641797, 0.20408164, 0.75]
+Total time=19.935489177703857s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.36798 accuracy= 0.35000 time= 0.02003
+accuracy of each class= [0.0, 0.9285714, 0.0, 0.41095892, 0.62686568, 0.20408164, 0.75]
+Total time=19.802923679351807s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.28700 accuracy= 0.24400 time= 0.03542
+accuracy of each class= [0.0, 0.66666663, 0.0, 0.33561644, 0.11940299, 0.16326532, 0.90625]
+Total time=19.622764825820923s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.95011 accuracy= 0.39200 time= 0.04483
+accuracy of each class= [0.0, 0.9285714, 0.034482762, 0.83561665, 0.26865673, 0.2857143, 0.0]
+Total time=20.813262462615967s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.03495 accuracy= 0.35800 time= 0.02688
+accuracy of each class= [0.012987013, 0.95238096, 0.022988508, 0.71232885, 0.19402985, 0.34693879, 0.0625]
+Total time=20.10165309906006s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.74214 accuracy= 0.40800 time= 0.02375
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.55479449, 0.73134327, 0.20408164, 0.75]
+Total time=20.630211114883423s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.50985 accuracy= 0.34800 time= 0.02696
+accuracy of each class= [0.0, 0.90476191, 0.0, 0.41095892, 0.62686568, 0.20408164, 0.75]
+Total time=20.069754600524902s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.43237 accuracy= 0.27600 time= 0.01813
+accuracy of each class= [0.0, 0.33333331, 0.0, 0.48630136, 0.19402985, 0.18367349, 0.96875]
+Total time=20.83585286140442s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.12876 accuracy= 0.43000 time= 0.06781
+accuracy of each class= [0.0, 0.90476191, 0.80459768, 0.5, 0.40298513, 0.081632659, 0.09375]
+Total time=20.4220027923584s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.20564 accuracy= 0.37800 time= 0.02546
+accuracy of each class= [0.0, 0.95238096, 0.20689656, 0.68493158, 0.10447761, 0.32653064, 0.25]
+Total time=19.52139663696289s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.74214 accuracy= 0.40800 time= 0.02548
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.55479449, 0.73134327, 0.20408164, 0.75]
+Total time=21.164449453353882s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 5.50985 accuracy= 0.34800 time= 0.03336
+accuracy of each class= [0.0, 0.90476191, 0.0, 0.41095892, 0.62686568, 0.20408164, 0.75]
+Total time=20.255703926086426s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.64375 accuracy= 0.33000 time= 0.01608
+accuracy of each class= [0.0, 0.66666663, 0.0, 0.58219182, 0.19402985, 0.16326532, 0.96875]
+Total time=17.70130705833435s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.23048 accuracy= 0.47000 time= 0.01714
+accuracy of each class= [0.0, 0.85714287, 0.75862068, 0.6575343, 0.40298507, 0.16326532, 0.0625]
+Total time=21.07271695137024s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.40558 accuracy= 0.32600 time= 0.02639
+accuracy of each class= [0.0, 0.97619051, 0.034482762, 0.56849319, 0.14925374, 0.46938777, 0.09375]
+Total time=21.060040712356567s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 4.74214 accuracy= 0.40800 time= 0.01655
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.55479449, 0.73134327, 0.20408164, 0.75]
+Total time=20.325712203979492s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 7.50985 accuracy= 0.34800 time= 0.01996
+accuracy of each class= [0.0, 0.90476191, 0.0, 0.41095892, 0.62686568, 0.20408164, 0.75]
+Total time=21.24729561805725s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.89716 accuracy= 0.37000 time= 0.01955
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.60273975, 0.26865673, 0.16326532, 0.96875]
+Total time=18.786108016967773s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.47125 accuracy= 0.40600 time= 0.04328
+accuracy of each class= [0.0, 0.95238096, 0.58620691, 0.62328774, 0.17910449, 0.18367349, 0.0]
+Total time=18.84174871444702s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.57394 accuracy= 0.38200 time= 0.03591
+accuracy of each class= [0.0, 0.88095242, 0.0, 0.67123294, 0.26865673, 0.4693878, 0.46875]
+Total time=20.458076238632202s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 1 4 2 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.94413 accuracy= 0.42800 time= 0.01984
+accuracy of each class= [0.0, 0.95238096, 0.0, 0.6095891, 0.73134333, 0.30612245, 0.65625]
+Total time=17.15399718284607s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.01512 accuracy= 0.22200 time= 0.04061
+accuracy of each class= [0.14285713, 0.0, 0.12, 0.092436969, 0.90789491, 0.16949151, 0.0]
+Total time=19.183854341506958s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.99299 accuracy= 0.25200 time= 0.01728
+accuracy of each class= [0.047619045, 0.0, 0.17, 0.15966387, 0.85526329, 0.37288135, 0.0]
+Total time=19.925147771835327s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.01651 accuracy= 0.30600 time= 0.02720
+accuracy of each class= [0.015873017, 0.0, 0.28999999, 0.57983184, 0.57894742, 0.16949151, 0.0]
+Total time=21.437784910202026s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.96857 accuracy= 0.37800 time= 0.02303
+accuracy of each class= [0.015873017, 0.0, 0.54999989, 0.7563023, 0.39473689, 0.22033899, 0.0]
+Total time=19.830339193344116s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.04918 accuracy= 0.43400 time= 0.02643
+accuracy of each class= [0.20634921, 0.0, 0.8499999, 0.63025188, 0.36842105, 0.25423729, 0.027777778]
+Total time=19.939452409744263s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.23680 accuracy= 0.19800 time= 0.05762
+accuracy of each class= [0.09523809, 0.0, 0.07, 0.084033608, 0.90789491, 0.11864406, 0.0]
+Total time=20.24647355079651s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.31969 accuracy= 0.24200 time= 0.03067
+accuracy of each class= [0.015873017, 0.0, 0.17, 0.11764705, 0.8815791, 0.37288135, 0.0]
+Total time=20.3004047870636s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.02823 accuracy= 0.33400 time= 0.01118
+accuracy of each class= [0.11111111, 0.0, 0.35999998, 0.47058818, 0.59210533, 0.3898305, 0.0]
+Total time=20.889097929000854s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.02305 accuracy= 0.43600 time= 0.02766
+accuracy of each class= [0.15873015, 0.0, 0.66999984, 0.68067211, 0.48684219, 0.32203388, 0.11111111]
+Total time=20.284139156341553s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.07173 accuracy= 0.41600 time= 0.03596
+accuracy of each class= [0.12698413, 0.0, 0.54999989, 0.68067211, 0.50000012, 0.18644068, 0.41666663]
+Total time=20.676827907562256s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.82754 accuracy= 0.19800 time= 0.02560
+accuracy of each class= [0.09523809, 0.0, 0.07, 0.084033608, 0.90789491, 0.11864406, 0.0]
+Total time=20.556063175201416s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.38170 accuracy= 0.21000 time= 0.01491
+accuracy of each class= [0.047619045, 0.0, 0.099999994, 0.067226887, 0.8815791, 0.28813556, 0.0]
+Total time=20.590183973312378s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.15475 accuracy= 0.28200 time= 0.04609
+accuracy of each class= [0.09523809, 0.0, 0.049999997, 0.78991574, 0.25, 0.28813559, 0.0]
+Total time=20.589524507522583s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.17719 accuracy= 0.26400 time= 0.02056
+accuracy of each class= [0.0, 0.0, 0.049999997, 0.73109215, 0.44736844, 0.10169492, 0.0]
+Total time=20.250419855117798s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.18679 accuracy= 0.38800 time= 0.04856
+accuracy of each class= [0.0, 0.12765957, 0.73999989, 0.37815121, 0.61842108, 0.33898303, 0.055555556]
+Total time=20.75212264060974s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.82754 accuracy= 0.19800 time= 0.04224
+accuracy of each class= [0.09523809, 0.0, 0.07, 0.084033608, 0.90789491, 0.11864406, 0.0]
+Total time=20.511560678482056s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 5.33160 accuracy= 0.20800 time= 0.04173
+accuracy of each class= [0.047619045, 0.0, 0.099999994, 0.067226887, 0.8815791, 0.27118644, 0.0]
+Total time=20.448603630065918s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.29149 accuracy= 0.27200 time= 0.02510
+accuracy of each class= [0.15873015, 0.0, 0.0099999998, 0.8067224, 0.28947371, 0.11864406, 0.0]
+Total time=20.70220446586609s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.41323 accuracy= 0.25800 time= 0.03798
+accuracy of each class= [0.0, 0.0, 0.0099999998, 0.8151257, 0.22368421, 0.23728815, 0.0]
+Total time=20.304919719696045s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 41.84821 accuracy= 0.30600 time= 0.04036
+accuracy of each class= [0.0, 0.0, 0.47999993, 0.16806722, 0.82894748, 0.37288135, 0.0]
+Total time=20.45851492881775s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 4.82754 accuracy= 0.19800 time= 0.03305
+accuracy of each class= [0.09523809, 0.0, 0.07, 0.084033608, 0.90789491, 0.11864406, 0.0]
+Total time=20.69260811805725s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 7.33160 accuracy= 0.20800 time= 0.05362
+accuracy of each class= [0.047619045, 0.0, 0.099999994, 0.067226887, 0.8815791, 0.27118644, 0.0]
+Total time=20.485639095306396s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.44949 accuracy= 0.28000 time= 0.04010
+accuracy of each class= [0.20634921, 0.0, 0.0, 0.83193243, 0.25, 0.15254237, 0.0]
+Total time=19.818204402923584s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.55930 accuracy= 0.26600 time= 0.03802
+accuracy of each class= [0.015873017, 0.0, 0.0099999998, 0.74789894, 0.4342106, 0.15254237, 0.0]
+Total time=20.138835430145264s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 61.84819 accuracy= 0.30600 time= 0.05988
+accuracy of each class= [0.0, 0.0, 0.47999993, 0.16806722, 0.82894748, 0.37288135, 0.0]
+Total time=19.98264503479004s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 1 2 3 3 1 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.92828 accuracy= 0.22800 time= 0.09455
+accuracy of each class= [0.063492067, 0.0, 0.17, 0.17647058, 0.8684212, 0.10169492, 0.0]
+Total time=19.46247363090515s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.99356 accuracy= 0.26600 time= 0.02340
+accuracy of each class= [0.0, 0.0, 0.64705873, 0.024691358, 0.49350643, 0.95918381, 0.0]
+Total time=21.095247268676758s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.97786 accuracy= 0.22400 time= 0.08176
+accuracy of each class= [0.0, 0.0, 0.39705878, 0.018518519, 0.44155839, 0.97959197, 0.0]
+Total time=20.263839721679688s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.03187 accuracy= 0.20800 time= 0.02869
+accuracy of each class= [0.0, 0.0, 0.3088235, 0.018518519, 0.41558436, 0.97959197, 0.0]
+Total time=19.844216346740723s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.07980 accuracy= 0.21400 time= 0.02809
+accuracy of each class= [0.0, 0.0, 0.41176465, 0.018518519, 0.36363631, 0.97959197, 0.0]
+Total time=20.17225217819214s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.09342 accuracy= 0.16600 time= 0.04290
+accuracy of each class= [0.0, 0.0, 0.0, 0.024691358, 0.38961035, 0.95918381, 0.060606055]
+Total time=20.820377111434937s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.01099 accuracy= 0.26200 time= 0.02596
+accuracy of each class= [0.0, 0.0, 0.64705873, 0.018518519, 0.48051941, 0.95918381, 0.0]
+Total time=20.40473175048828s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.04893 accuracy= 0.22200 time= 0.02241
+accuracy of each class= [0.0, 0.0, 0.41176465, 0.018518519, 0.41558436, 0.97959197, 0.0]
+Total time=20.311279773712158s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.07428 accuracy= 0.29000 time= 0.02575
+accuracy of each class= [0.0, 0.0, 0.74999988, 0.043209877, 0.53246748, 0.93877572, 0.0]
+Total time=20.536444902420044s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.36924 accuracy= 0.26600 time= 0.02351
+accuracy of each class= [0.0, 0.0, 0.52941173, 0.043209877, 0.55844146, 0.95918381, 0.0]
+Total time=20.3096706867218s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.26226 accuracy= 0.16400 time= 0.02810
+accuracy of each class= [0.0, 0.0, 0.0, 0.024691358, 0.38961035, 0.95918381, 0.030303027]
+Total time=19.467976331710815s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.04967 accuracy= 0.26600 time= 0.03905
+accuracy of each class= [0.0, 0.0, 0.66176462, 0.018518519, 0.49350643, 0.95918381, 0.0]
+Total time=20.748475313186646s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.03723 accuracy= 0.30600 time= 0.01814
+accuracy of each class= [0.0, 0.0, 0.8382352, 0.024691358, 0.5844155, 0.95918381, 0.0]
+Total time=20.35859251022339s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.14227 accuracy= 0.30000 time= 0.03793
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.049382716, 0.50649345, 0.87755114, 0.0]
+Total time=20.84167742729187s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 3.18762 accuracy= 0.26400 time= 0.02702
+accuracy of each class= [0.0, 0.0, 0.45588231, 0.067901231, 0.57142854, 0.93877572, 0.0]
+Total time=20.140071153640747s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.26835 accuracy= 0.19800 time= 0.01777
+accuracy of each class= [0.066666663, 0.0, 0.0, 0.067901231, 0.41558436, 0.93877572, 0.15151513]
+Total time=19.5771164894104s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.14936 accuracy= 0.27400 time= 0.01967
+accuracy of each class= [0.0, 0.0, 0.70588225, 0.018518519, 0.50649345, 0.95918381, 0.0]
+Total time=20.690801858901978s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.33593 accuracy= 0.28400 time= 0.02876
+accuracy of each class= [0.0, 0.0, 0.76470578, 0.018518519, 0.53246748, 0.93877572, 0.0]
+Total time=20.552485942840576s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.40544 accuracy= 0.29400 time= 0.05028
+accuracy of each class= [0.0, 0.0, 0.89705884, 0.024691358, 0.50649345, 0.87755114, 0.0]
+Total time=19.79937195777893s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 18.52686 accuracy= 0.17800 time= 0.02644
+accuracy of each class= [0.0, 0.0, 0.11764705, 0.018518519, 0.38961035, 0.97959197, 0.0]
+Total time=21.14358162879944s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.53911 accuracy= 0.19000 time= 0.06039
+accuracy of each class= [0.0, 0.027777778, 0.0, 0.030864198, 0.4675324, 0.91836751, 0.2424242]
+Total time=19.813719272613525s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.31522 accuracy= 0.26600 time= 0.03217
+accuracy of each class= [0.0, 0.0, 0.66176462, 0.018518519, 0.49350643, 0.95918381, 0.0]
+Total time=19.686601877212524s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.64873 accuracy= 0.29000 time= 0.02037
+accuracy of each class= [0.0, 0.0, 0.73529398, 0.018518519, 0.59740251, 0.93877572, 0.0]
+Total time=20.52924680709839s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.47442 accuracy= 0.27400 time= 0.02711
+accuracy of each class= [0.0, 0.0, 0.92647058, 0.0061728396, 0.44155839, 0.79591846, 0.0]
+Total time=19.973975896835327s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 28.52686 accuracy= 0.17800 time= 0.03056
+accuracy of each class= [0.0, 0.0, 0.11764705, 0.018518519, 0.38961035, 0.97959197, 0.0]
+Total time=21.49334168434143s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 2.66193 accuracy= 0.21000 time= 0.03137
+accuracy of each class= [0.0, 0.47222224, 0.0, 0.018518519, 0.4675324, 0.83673483, 0.2424242]
+Total time=20.25173330307007s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 2 2 3 3 1]
+training...
+Optimization Finished!
+Test set results: cost= 1.98065 accuracy= 0.27000 time= 0.03715
+accuracy of each class= [0.0, 0.0, 0.64705873, 0.024691358, 0.50649345, 0.97959197, 0.0]
+Total time=19.88618230819702s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.65481 accuracy= 0.56400 time= 0.02993
+accuracy of each class= [0.0, 0.73170727, 0.84615391, 0.95973158, 0.0, 0.37499997, 0.89285713]
+Total time=20.214204788208008s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.81970 accuracy= 0.49000 time= 0.02414
+accuracy of each class= [0.0, 0.51219511, 0.46153852, 0.98657721, 0.0, 0.39583328, 0.78571433]
+Total time=18.12084126472473s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.77683 accuracy= 0.54200 time= 0.02033
+accuracy of each class= [0.0, 0.56097555, 0.73076934, 0.97986579, 0.0, 0.47916663, 0.78571433]
+Total time=20.373045206069946s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.71616 accuracy= 0.57200 time= 0.02279
+accuracy of each class= [0.025316454, 0.58536583, 0.88461554, 0.95973158, 0.0, 0.54166663, 0.78571433]
+Total time=20.96992564201355s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.92363 accuracy= 0.39000 time= 0.02356
+accuracy of each class= [0.050632909, 0.804878, 0.025641026, 0.67114097, 0.0, 0.72916663, 0.75]
+Total time=21.38790249824524s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.29244 accuracy= 0.42400 time= 0.01968
+accuracy of each class= [0.0, 0.12195121, 0.53846163, 0.68456382, 0.0, 0.8125, 0.85714287]
+Total time=21.103354454040527s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.80283 accuracy= 0.49400 time= 0.04411
+accuracy of each class= [0.0, 0.51219511, 0.50000012, 0.99328864, 0.0, 0.35416663, 0.78571433]
+Total time=19.736217260360718s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.69623 accuracy= 0.58200 time= 0.02369
+accuracy of each class= [0.037974682, 0.65853649, 0.85897452, 0.95302022, 0.0, 0.58333325, 0.85714287]
+Total time=20.58035111427307s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.85819 accuracy= 0.54200 time= 0.01759
+accuracy of each class= [0.0, 0.51219511, 0.65384626, 0.95302022, 0.0, 0.72916663, 0.78571433]
+Total time=20.173916578292847s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.97315 accuracy= 0.43200 time= 0.01665
+accuracy of each class= [0.53164554, 0.85365844, 0.03846154, 0.46308726, 0.14285713, 0.70833325, 0.78571433]
+Total time=20.300578117370605s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.65505 accuracy= 0.56200 time= 0.01835
+accuracy of each class= [0.0, 0.63414633, 0.82051289, 0.97986579, 0.0, 0.43749994, 0.85714287]
+Total time=20.983648777008057s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.81792 accuracy= 0.52400 time= 0.01944
+accuracy of each class= [0.0, 0.56097555, 0.66666675, 0.97986579, 0.0, 0.39583328, 0.78571433]
+Total time=18.48961853981018s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.75878 accuracy= 0.56600 time= 0.02463
+accuracy of each class= [0.0, 0.68292677, 0.75641042, 0.966443, 0.0, 0.62499988, 0.78571433]
+Total time=17.89783811569214s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.84447 accuracy= 0.54600 time= 0.02999
+accuracy of each class= [0.063291132, 0.53658533, 0.67948729, 0.92617458, 0.0, 0.68749994, 0.78571433]
+Total time=20.164066791534424s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.10613 accuracy= 0.17400 time= 0.02354
+accuracy of each class= [0.0, 0.21951219, 0.0, 0.073825501, 0.064935058, 0.875, 0.71428567]
+Total time=19.762914657592773s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.82729 accuracy= 0.55000 time= 0.01904
+accuracy of each class= [0.0, 0.60975611, 0.76923084, 0.97986579, 0.0, 0.45833328, 0.78571433]
+Total time=20.150899171829224s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.89382 accuracy= 0.55600 time= 0.02575
+accuracy of each class= [0.0, 0.65853649, 0.70512831, 0.95973158, 0.0, 0.64583325, 0.78571433]
+Total time=20.26939582824707s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.95410 accuracy= 0.54200 time= 0.06524
+accuracy of each class= [0.0, 0.56097555, 0.65384626, 0.90604031, 0.0, 0.83333325, 0.78571433]
+Total time=20.30694055557251s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.98875 accuracy= 0.47400 time= 0.02965
+accuracy of each class= [0.0, 0.46341461, 0.44871804, 0.81879193, 0.0, 0.8125, 0.78571433]
+Total time=20.42890977859497s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 41.60295 accuracy= 0.17800 time= 0.02437
+accuracy of each class= [0.0, 0.024390245, 0.025641026, 0.13422818, 0.0, 0.95833325, 0.71428567]
+Total time=20.12855577468872s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.87475 accuracy= 0.55600 time= 0.04272
+accuracy of each class= [0.0, 0.65853649, 0.70512831, 0.97315443, 0.0, 0.60416663, 0.78571433]
+Total time=19.53557801246643s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.96549 accuracy= 0.55000 time= 0.03470
+accuracy of each class= [0.0, 0.65853649, 0.65384626, 0.93959737, 0.0, 0.72916663, 0.78571433]
+Total time=20.680092811584473s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.87939 accuracy= 0.58600 time= 0.03602
+accuracy of each class= [0.11392405, 0.70731705, 0.80769235, 0.89261752, 0.0, 0.77083325, 0.78571433]
+Total time=21.437370538711548s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.07716 accuracy= 0.49600 time= 0.02341
+accuracy of each class= [0.012658227, 0.34146342, 0.57692313, 0.85234904, 0.0, 0.85416663, 0.71428573]
+Total time=19.649585247039795s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 61.60296 accuracy= 0.17800 time= 0.01334
+accuracy of each class= [0.0, 0.024390245, 0.025641026, 0.13422818, 0.0, 0.95833325, 0.71428567]
+Total time=20.084948539733887s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 2 2 4 1 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.80801 accuracy= 0.49000 time= 0.01927
+accuracy of each class= [0.0, 0.53658533, 0.46153852, 0.98657721, 0.0, 0.37499997, 0.78571433]
+Total time=19.28254270553589s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.06656 accuracy= 0.35000 time= 0.01537
+accuracy of each class= [0.20895523, 0.0, 0.0, 0.97315443, 0.087912083, 0.0, 0.26666665]
+Total time=21.391610145568848s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.23846 accuracy= 0.30200 time= 0.03624
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.71140945, 0.065934062, 0.0, 0.79999995]
+Total time=21.09700894355774s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.98305 accuracy= 0.34600 time= 0.02224
+accuracy of each class= [0.25373134, 0.0, 0.0, 0.87919474, 0.021978021, 0.0, 0.76666665]
+Total time=20.080575704574585s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.99250 accuracy= 0.34200 time= 0.02284
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.8859061, 0.01098901, 0.0, 0.76666665]
+Total time=20.971400260925293s
+
+name           : c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.99350 accuracy= 0.30800 time= 0.02663
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.7718122, 0.01098901, 0.0, 0.76666665]
+Total time=20.20432186126709s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.31656 accuracy= 0.35000 time= 0.01740
+accuracy of each class= [0.20895523, 0.0, 0.0, 0.97315443, 0.087912083, 0.0, 0.26666665]
+Total time=19.817807912826538s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.73846 accuracy= 0.30200 time= 0.02731
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.71140945, 0.065934062, 0.0, 0.79999995]
+Total time=21.024845123291016s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.99984 accuracy= 0.35200 time= 0.01811
+accuracy of each class= [0.25373134, 0.0, 0.0, 0.90604031, 0.021978021, 0.0, 0.73333329]
+Total time=20.287055492401123s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.05858 accuracy= 0.31600 time= 0.05483
+accuracy of each class= [0.26865673, 0.0, 0.0, 0.74496651, 0.054945052, 0.0, 0.79999995]
+Total time=19.445905447006226s
+
+name           : c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.08104 accuracy= 0.29000 time= 0.02221
+accuracy of each class= [0.26865673, 0.0, 0.0, 0.67785239, 0.01098901, 0.0, 0.83333325]
+Total time=20.34349226951599s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.91656 accuracy= 0.35000 time= 0.02950
+accuracy of each class= [0.20895523, 0.0, 0.0, 0.97315443, 0.087912083, 0.0, 0.26666665]
+Total time=20.554628133773804s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 3.93846 accuracy= 0.30200 time= 0.02331
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.71140945, 0.065934062, 0.0, 0.79999995]
+Total time=20.3588125705719s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.02512 accuracy= 0.36000 time= 0.02045
+accuracy of each class= [0.23880598, 0.0, 0.0, 0.93959737, 0.021978021, 0.0, 0.73333329]
+Total time=20.78386950492859s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.14405 accuracy= 0.33200 time= 0.01692
+accuracy of each class= [0.40298507, 0.0, 0.0, 0.67785239, 0.16483516, 0.0, 0.76666665]
+Total time=21.070899486541748s
+
+name           : c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 21.79469 accuracy= 0.19000 time= 0.02571
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.16778524, 0.48351645, 0.0, 0.36666664]
+Total time=19.18065047264099s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 3.91656 accuracy= 0.35000 time= 0.03379
+accuracy of each class= [0.20895523, 0.0, 0.0, 0.97315443, 0.087912083, 0.0, 0.26666665]
+Total time=20.248902320861816s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 5.93846 accuracy= 0.30200 time= 0.02715
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.71140945, 0.065934062, 0.0, 0.79999995]
+Total time=19.691501140594482s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.19030 accuracy= 0.31800 time= 0.04843
+accuracy of each class= [0.40298507, 0.032258064, 0.0, 0.62416112, 0.17582417, 0.0, 0.73333329]
+Total time=19.44051742553711s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.12928 accuracy= 0.31200 time= 0.03449
+accuracy of each class= [0.43283582, 0.0, 0.0, 0.63087255, 0.12087911, 0.0, 0.73333329]
+Total time=19.947746992111206s
+
+name           : c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 41.79468 accuracy= 0.19000 time= 0.02781
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.16778524, 0.48351645, 0.0, 0.36666664]
+Total time=18.81386685371399s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 4.91656 accuracy= 0.35000 time= 0.01885
+accuracy of each class= [0.20895523, 0.0, 0.0, 0.97315443, 0.087912083, 0.0, 0.26666665]
+Total time=19.771470069885254s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 7.93846 accuracy= 0.30200 time= 0.02559
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.71140945, 0.065934062, 0.0, 0.79999995]
+Total time=19.38934636116028s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.27531 accuracy= 0.27800 time= 0.02929
+accuracy of each class= [0.31343284, 0.0, 0.0, 0.55704707, 0.12087911, 0.0, 0.79999995]
+Total time=18.949999570846558s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 2.36254 accuracy= 0.25400 time= 0.02173
+accuracy of each class= [0.47761196, 0.0, 0.0, 0.44966447, 0.043956041, 0.0, 0.79999995]
+Total time=20.233349323272705s
+
+name           : c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 61.79469 accuracy= 0.19000 time= 0.02527
+accuracy of each class= [0.2238806, 0.0, 0.0, 0.16778524, 0.48351645, 0.0, 0.36666664]
+Total time=18.972909212112427s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 0.5
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 1 1 5 2 1 2]
+training...
+Optimization Finished!
+Test set results: cost= 1.92185 accuracy= 0.31400 time= 0.02976
+accuracy of each class= [0.07462687, 0.0, 0.0, 0.99328864, 0.0, 0.0, 0.13333333]
+Total time=18.999908685684204s
+
+REPEAT	10
+DATASET 	train_size	valid_size	RESULTS 	STD     	NAME    
+cora    	0.5%    	20%     	0.411600	0.122901	c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+cora    	0.5%    	20%     	0.380000	0.096083	c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+cora    	0.5%    	20%     	0.398400	0.116443	c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+cora    	0.5%    	20%     	0.413200	0.093779	c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+cora    	0.5%    	20%     	0.429800	0.130198	c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+cora    	0.5%    	20%     	0.405800	0.115922	c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+cora    	0.5%    	20%     	0.380800	0.111417	c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+cora    	0.5%    	20%     	0.377200	0.099949	c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+cora    	0.5%    	20%     	0.412600	0.082370	c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+cora    	0.5%    	20%     	0.390600	0.100598	c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+cora    	0.5%    	20%     	0.412400	0.129524	c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+cora    	0.5%    	20%     	0.400800	0.109684	c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+cora    	0.5%    	20%     	0.374800	0.093728	c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+cora    	0.5%    	20%     	0.396200	0.099315	c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+cora    	0.5%    	20%     	0.355000	0.114592	c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+cora    	0.5%    	20%     	0.411200	0.125275	c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+cora    	0.5%    	20%     	0.378400	0.106916	c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+cora    	0.5%    	20%     	0.394000	0.105626	c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+cora    	0.5%    	20%     	0.373400	0.095536	c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+cora    	0.5%    	20%     	0.318600	0.108738	c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+cora    	0.5%    	20%     	0.404000	0.118315	c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+cora    	0.5%    	20%     	0.365600	0.094394	c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+cora    	0.5%    	20%     	0.376800	0.107689	c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+cora    	0.5%    	20%     	0.352000	0.092421	c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+cora    	0.5%    	20%     	0.300600	0.084518	c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+cora    	0.5%    	20%     	0.403000	0.097436	c16c_Model0
+[1 1 1 5 2 1 2] [0.150, 0.309, 0.483, 0.574, 0.440, 0.368, 0.308, ]	c16c_Model0_triplet_MARGIN0.3_lamda0.5_maxTrip1000
+[1 1 1 5 2 1 2] [0.148, 0.265, 0.315, 0.531, 0.430, 0.405, 0.440, ]	c16c_Model0_triplet_MARGIN0.3_lamda1_maxTrip1000
+[1 1 1 5 2 1 2] [0.200, 0.239, 0.396, 0.600, 0.321, 0.413, 0.382, ]	c16c_Model0_triplet_MARGIN0.3_lamda3_maxTrip1000
+[1 1 1 5 2 1 2] [0.192, 0.280, 0.462, 0.612, 0.272, 0.551, 0.247, ]	c16c_Model0_triplet_MARGIN0.3_lamda5_maxTrip1000
+[1 1 1 5 2 1 2] [0.166, 0.357, 0.447, 0.643, 0.254, 0.463, 0.476, ]	c16c_Model0_triplet_MARGIN0.3_lamda10_maxTrip1000
+[1 1 1 5 2 1 2] [0.147, 0.243, 0.461, 0.534, 0.458, 0.489, 0.286, ]	c16c_Model0_triplet_MARGIN0.8_lamda0.5_maxTrip1000
+[1 1 1 5 2 1 2] [0.139, 0.258, 0.359, 0.525, 0.455, 0.397, 0.346, ]	c16c_Model0_triplet_MARGIN0.8_lamda1_maxTrip1000
+[1 1 1 5 2 1 2] [0.236, 0.139, 0.403, 0.598, 0.235, 0.361, 0.380, ]	c16c_Model0_triplet_MARGIN0.8_lamda3_maxTrip1000
+[1 1 1 5 2 1 2] [0.160, 0.303, 0.434, 0.605, 0.350, 0.510, 0.254, ]	c16c_Model0_triplet_MARGIN0.8_lamda5_maxTrip1000
+[1 1 1 5 2 1 2] [0.236, 0.379, 0.425, 0.476, 0.309, 0.466, 0.386, ]	c16c_Model0_triplet_MARGIN0.8_lamda10_maxTrip1000
+[1 1 1 5 2 1 2] [0.152, 0.299, 0.487, 0.572, 0.454, 0.367, 0.303, ]	c16c_Model0_triplet_MARGIN2.0_lamda0.5_maxTrip1000
+[1 1 1 5 2 1 2] [0.141, 0.261, 0.445, 0.551, 0.460, 0.390, 0.342, ]	c16c_Model0_triplet_MARGIN2.0_lamda1_maxTrip1000
+[1 1 1 5 2 1 2] [0.241, 0.262, 0.356, 0.570, 0.275, 0.392, 0.366, ]	c16c_Model0_triplet_MARGIN2.0_lamda3_maxTrip1000
+[1 1 1 5 2 1 2] [0.128, 0.240, 0.417, 0.623, 0.298, 0.419, 0.352, ]	c16c_Model0_triplet_MARGIN2.0_lamda5_maxTrip1000
+[1 1 1 5 2 1 2] [0.076, 0.247, 0.465, 0.403, 0.367, 0.490, 0.314, ]	c16c_Model0_triplet_MARGIN2.0_lamda10_maxTrip1000
+[1 1 1 5 2 1 2] [0.145, 0.288, 0.479, 0.571, 0.458, 0.392, 0.267, ]	c16c_Model0_triplet_MARGIN4.0_lamda0.5_maxTrip1000
+[1 1 1 5 2 1 2] [0.150, 0.273, 0.351, 0.516, 0.386, 0.469, 0.357, ]	c16c_Model0_triplet_MARGIN4.0_lamda1_maxTrip1000
+[1 1 1 5 2 1 2] [0.222, 0.189, 0.429, 0.624, 0.279, 0.374, 0.377, ]	c16c_Model0_triplet_MARGIN4.0_lamda3_maxTrip1000
+[1 1 1 5 2 1 2] [0.119, 0.214, 0.358, 0.611, 0.231, 0.466, 0.344, ]	c16c_Model0_triplet_MARGIN4.0_lamda5_maxTrip1000
+[1 1 1 5 2 1 2] [0.103, 0.254, 0.318, 0.399, 0.327, 0.389, 0.349, ]	c16c_Model0_triplet_MARGIN4.0_lamda10_maxTrip1000
+[1 1 1 5 2 1 2] [0.143, 0.288, 0.495, 0.539, 0.459, 0.393, 0.267, ]	c16c_Model0_triplet_MARGIN6.0_lamda0.5_maxTrip1000
+[1 1 1 5 2 1 2] [0.156, 0.270, 0.337, 0.511, 0.400, 0.387, 0.351, ]	c16c_Model0_triplet_MARGIN6.0_lamda1_maxTrip1000
+[1 1 1 5 2 1 2] [0.261, 0.227, 0.401, 0.571, 0.236, 0.365, 0.401, ]	c16c_Model0_triplet_MARGIN6.0_lamda3_maxTrip1000
+[1 1 1 5 2 1 2] [0.127, 0.223, 0.354, 0.565, 0.208, 0.456, 0.286, ]	c16c_Model0_triplet_MARGIN6.0_lamda5_maxTrip1000
+[1 1 1 5 2 1 2] [0.0771, 0.201, 0.314, 0.362, 0.326, 0.359, 0.442, ]	c16c_Model0_triplet_MARGIN6.0_lamda10_maxTrip1000
+[1 1 1 5 2 1 2] [0.131, 0.257, 0.443, 0.605, 0.404, 0.398, 0.280, ]	c16c_Model0
