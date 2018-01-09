@@ -136,7 +136,7 @@ configuration ={
             'triplet_lamda':triplet_lamda,
             'hard' : False,
             'feature_normalize':True
-        }  for margin in [0.3, 0.8, 2.0]
+        }  for margin in [4, 8, 12]
         for triplet_lamda in [1, 5, 10]
         
     ]+
@@ -150,7 +150,7 @@ configuration ={
             'triplet_lamda':triplet_lamda,
             'hard' : False,
             'feature_normalize':False,
-        } for margin in [0.3, 0.8, 2.0]
+        } for margin in [4, 8, 12]
         for triplet_lamda in [1, 5, 10]
     ]
 #     
