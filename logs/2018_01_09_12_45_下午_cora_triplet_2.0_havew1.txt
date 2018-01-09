@@ -1,0 +1,637 @@
+Namespace(dataset='cora', loss_func=None, repeating=10, train_size=2.0, validate=None, verbose=False, ws_beta=None)
+{   'default': {   'Model': 0,
+                   'Model11': 'nearest',
+                   'Model19': 'union',
+                   'Model_to_add_label': {'Model': 0},
+                   'Model_to_predict': {'Model': 0},
+                   'absorption_type': 'binary',
+                   'alpha': 1e-06,
+                   'beta': 0.05,
+                   'classifier': 'svm',
+                   'connection': 'cc',
+                   'conv': 'gcn',
+                   'dataset': 'cora',
+                   'drop_inter_class_edge': False,
+                   'dropout': 0.5,
+                   'early_stopping': 0,
+                   'epochs': 200,
+                   'feature': 'bow',
+                   'gamma': 1e-05,
+                   'k': -1,
+                   'lambda': 0,
+                   'layer_size': [16],
+                   'learning_rate': 0.02,
+                   'logdir': '',
+                   'logging': False,
+                   'loss_func': 'default',
+                   'max_degree': 2,
+                   'max_triplet': 1000,
+                   'mu': 1,
+                   'name': '',
+                   'poly_parameters': [1, -2, 1],
+                   'random_seed': 1515473102,
+                   'smoothing': None,
+                   'svm_degree': 4,
+                   'svm_kernel': 'rbf',
+                   't': 500,
+                   't2': 100,
+                   'taubin_f': 0.7,
+                   'taubin_lambda': 0.3,
+                   'taubin_mu': -0.31,
+                   'taubin_repeat': 5,
+                   'taubin_t': 0.2,
+                   'threads': 64,
+                   'train': True,
+                   'train_size': 2.0,
+                   'tree_depth': None,
+                   'validate': False,
+                   'validation_size': 20,
+                   'weight_decay': 0.0005,
+                   'ws_beta': 20},
+    'model_list': [   {   'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 0.3,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 0.8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 2.0,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10}],
+    'repeating': 10}
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.57074 accuracy= 0.62800 time= 0.01459
+accuracy of each class= [0.49999994, 0.34146345, 0.95945948, 0.8382352, 0.44871804, 0.515625, 0.34146345]
+Total time=10.62974500656128s
+
+name           : c16c_Model0_triplet_0.3_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.58542 accuracy= 0.60400 time= 0.01366
+accuracy of each class= [0.48484844, 0.56097555, 0.95945948, 0.80882347, 0.48717955, 0.421875, 0.024390245]
+Total time=17.79631280899048s
+
+name           : c16c_Model0_triplet_0.3_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.66863 accuracy= 0.53400 time= 0.04993
+accuracy of each class= [0.48484844, 0.29268295, 0.93243253, 0.76470584, 0.44871804, 0.1875, 0.073170736]
+Total time=18.425124168395996s
+
+name           : c16c_Model0_triplet_0.3_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.66864 accuracy= 0.57200 time= 0.01779
+accuracy of each class= [0.530303, 0.41463414, 0.93243253, 0.73529416, 0.42307696, 0.34375, 0.24390243]
+Total time=16.932795763015747s
+
+name           : c16c_Model0_triplet_0.8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.64364 accuracy= 0.59000 time= 0.01167
+accuracy of each class= [0.560606, 0.34146342, 0.95945948, 0.71323526, 0.47435901, 0.484375, 0.19512196]
+Total time=15.922443151473999s
+
+name           : c16c_Model0_triplet_0.8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.92304 accuracy= 0.60000 time= 0.01196
+accuracy of each class= [0.5151515, 0.46341461, 0.95945948, 0.54411769, 0.67948729, 0.609375, 0.24390243]
+Total time=17.34888505935669s
+
+name           : c16c_Model0_triplet_0.8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.95386 accuracy= 0.60800 time= 0.05670
+accuracy of each class= [0.530303, 0.51219511, 0.94594604, 0.54411769, 0.69230783, 0.625, 0.24390243]
+Total time=17.48860216140747s
+
+name           : c16c_Model0_triplet_2.0_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.71888 accuracy= 0.64800 time= 0.02213
+accuracy of each class= [0.49999994, 0.43902439, 0.97297305, 0.69852936, 0.55128217, 0.671875, 0.48780486]
+Total time=19.032138109207153s
+
+name           : c16c_Model0_triplet_2.0_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 2.40212 accuracy= 0.61400 time= 0.06617
+accuracy of each class= [0.48484844, 0.24390243, 0.94594604, 0.67647058, 0.55128217, 0.671875, 0.41463417]
+Total time=23.116007804870605s
+
+name           : c16c_Model0_triplet_2.0_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 2.23329 accuracy= 0.59400 time= 0.04287
+accuracy of each class= [0.5, 0.31707317, 1.0000001, 0.58088237, 0.58974367, 0.515625, 0.46341461]
+Total time=24.01257610321045s
+
+name           : c16c_Model0_triplet_0.3_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.66304 accuracy= 0.59400 time= 0.02959
+accuracy of each class= [0.5454545, 0.2682927, 0.95945948, 0.70588237, 0.47435901, 0.484375, 0.36585364]
+Total time=22.251602172851562s
+
+name           : c16c_Model0_triplet_0.3_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.79232 accuracy= 0.58000 time= 0.02578
+accuracy of each class= [0.530303, 0.17073171, 0.94594604, 0.71323526, 0.42307696, 0.484375, 0.41463414]
+Total time=23.362316370010376s
+
+name           : c16c_Model0_triplet_0.3_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.82852 accuracy= 0.61000 time= 0.01715
+accuracy of each class= [0.5151515, 0.41463414, 0.94594604, 0.69117641, 0.44871804, 0.5, 0.56097555]
+Total time=23.792839765548706s
+
+name           : c16c_Model0_triplet_0.8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.82396 accuracy= 0.61000 time= 0.02773
+accuracy of each class= [0.5454545, 0.34146345, 0.95945948, 0.72058821, 0.46153852, 0.53125, 0.39024392]
+Total time=22.654839992523193s
+
+name           : c16c_Model0_triplet_0.8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 2.27768 accuracy= 0.60800 time= 0.01524
+accuracy of each class= [0.5757575, 0.36585364, 0.93243253, 0.69117641, 0.4358975, 0.5625, 0.43902439]
+Total time=23.450525999069214s
+
+name           : c16c_Model0_triplet_0.8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 2.39808 accuracy= 0.63600 time= 0.02360
+accuracy of each class= [0.46969691, 0.58536583, 0.93243253, 0.68382353, 0.4358975, 0.671875, 0.58536583]
+Total time=23.046677112579346s
+
+name           : c16c_Model0_triplet_2.0_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 2.62622 accuracy= 0.60600 time= 0.02065
+accuracy of each class= [0.5454545, 0.34146345, 0.97297305, 0.71323526, 0.44871804, 0.53125, 0.36585364]
+Total time=23.180078506469727s
+
+name           : c16c_Model0_triplet_2.0_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.53403 accuracy= 0.63000 time= 0.01695
+accuracy of each class= [0.45454541, 0.58536583, 0.93243253, 0.70588237, 0.39743596, 0.671875, 0.53658533]
+Total time=22.543481588363647s
+
+name           : c16c_Model0_triplet_2.0_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  4 12 14  7  4  4]
+[[497, 0], [1220, 0], [2052, 0], [2057, 0], [2089, 0], [2098, 0], [2183, 0], [2197, 0], [2232, 0], [36, 1], [121, 1], [487, 1], [1244, 1], [101, 2], [513, 2], [565, 2], [754, 2], [1466, 2], [1586, 2], [1632, 2], [2460, 2], [2476, 2], [2530, 2], [2554, 2], [2618, 2], [40, 3], [398, 3], [770, 3], [868, 3], [1274, 3], [1371, 3], [1462, 3], [1497, 3], [2014, 3], [2126, 3], [2303, 3], [2310, 3], [2624, 3], [2640, 3], [245, 4], [523, 4], [802, 4], [2122, 4], [2473, 4], [2645, 4], [2694, 4], [735, 5], [1578, 5], [1650, 5], [2281, 5], [96, 6], [495, 6], [1399, 6], [2161, 6]]
+[  9.   4.  12.  14.   7.   4.   4.]
+not hard (19838, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 5.53954 accuracy= 0.60200 time= 0.01778
+accuracy of each class= [0.5151515, 0.34146342, 0.91891897, 0.66911769, 0.4358975, 0.640625, 0.46341461]
+Total time=22.89208483695984s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  3 11 14 10  6  1]
+[[257, 0], [279, 0], [1275, 0], [1416, 0], [2073, 0], [2137, 0], [2200, 0], [2502, 0], [2544, 0], [399, 1], [1088, 1], [1245, 1], [110, 2], [632, 2], [752, 2], [978, 2], [1003, 2], [1148, 2], [1233, 2], [1389, 2], [1763, 2], [2220, 2], [2444, 2], [402, 3], [473, 3], [641, 3], [770, 3], [1273, 3], [1274, 3], [1447, 3], [1456, 3], [1462, 3], [1995, 3], [2077, 3], [2412, 3], [2541, 3], [2634, 3], [243, 4], [348, 4], [529, 4], [782, 4], [1196, 4], [1519, 4], [1796, 4], [2265, 4], [2583, 4], [2675, 4], [252, 5], [573, 5], [587, 5], [1368, 5], [1962, 5], [2375, 5], [2109, 6]]
+[  9.   3.  11.  14.  10.   6.   1.]
+not hard (21009, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.47293 accuracy= 0.69800 time= 0.01310
+accuracy of each class= [0.73134333, 0.058823526, 0.983051, 0.82692307, 0.81318682, 0.61666667, 0.0]
+Total time=15.141738176345825s
+
+name           : c16c_Model0_triplet_0.3_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 2.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 9  3 11 14 10  6  1]
+[[257, 0], [279, 0], [1275, 0], [1416, 0], [2073, 0], [2137, 0], [2200, 0], [2502, 0], [2544, 0], [399, 1], [1088, 1], [1245, 1], [110, 2], [632, 2], [752, 2], [978, 2], [1003, 2], [1148, 2], [1233, 2], [1389, 2], [1763, 2], [2220, 2], [2444, 2], [402, 3], [473, 3], [641, 3], [770, 3], [1273, 3], [1274, 3], [1447, 3], [1456, 3], [1462, 3], [1995, 3], [2077, 3], [2412, 3], [2541, 3], [2634, 3], [243, 4], [348, 4], [529, 4], [782, 4], [1196, 4], [1519, 4], [1796, 4], [2265, 4], [2583, 4], [2675, 4], [252, 5], [573, 5], [587, 5], [1368, 5], [1962, 5], [2375, 5], [2109, 6]]
+[  9.   3.  11.  14.  10.   6.   1.]
+not hard (21009, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
