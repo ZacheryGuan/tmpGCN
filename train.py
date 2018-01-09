@@ -41,7 +41,7 @@ def train(model_config, sess, seed, data_split = None):
         train_mask  = data_split['train_mask']
         val_mask    = data_split['val_mask']
         test_mask   = data_split['test_mask']
-        triplet     = data_split['triplet']
+        triplet = data_split['triplet']
     else:
         # Load data
         adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, size_of_each_class, triplet = \
@@ -65,6 +65,7 @@ def train(model_config, sess, seed, data_split = None):
             'val_mask' : val_mask,
             'test_mask' : test_mask,
             'triplet' : triplet
+          
         }
     laplacian = sparse.diags(adj.sum(1).flat, 0) - adj
     laplacian = laplacian.astype(np.float32).tocoo()
@@ -251,6 +252,7 @@ def train(model_config, sess, seed, data_split = None):
         'features': tf.sparse_placeholder(tf.float32, name='features', shape=np.array(features[2], dtype=np.int64)),
         'labels': tf.placeholder(tf.int32, name='labels', shape=(None, y_train.shape[1])),
         'labels_mask': tf.placeholder(tf.int32, name='labels_mask'),
+        'softmax_weight': tf.placeholder(tf.int32, name='softmax_weight'),
         'dropout': tf.placeholder_with_default(0., name='dropout', shape=()),
         'num_features_nonzero': tf.placeholder(tf.int32, name='num_features_nonzero'),
         # helper variable for sparse dropout

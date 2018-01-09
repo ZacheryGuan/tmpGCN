@@ -107,9 +107,11 @@ configuration ={
         'threads'           : 2*cpu_count(),  #'Number of threads'
         'train'             : True,
         'drop_inter_class_edge': False,
-        'loss_func'         :'default',     #'imbalance', 'triplet'
+        'loss_func'         :'default',     #'imbalance'
         'ws_beta'           : 20,
-		'max_triplet':1000  #for triplet, 1000 for cora to get all tripets
+        
+        
+        'max_triplet':1000  #for cora
     },
 
     # The list of model to be train.
@@ -120,18 +122,55 @@ configuration ={
             'Model' : 0,
             'connection'        : 'cc',
             'conv'              : 'gcn',
-            'loss_func'         : 'triplet',
-            'MARGIN' : margin,
-            'triplet_lamda':triplet_lambda
-        } for margin in [0.2, 0.3, 0.4] for triplet_lambda in [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+            'hard' : False,
+            'feature_normalize':False            
+        }
     ] +
     [
         {
             'Model' : 0,
             'connection'        : 'cc',
             'conv'              : 'gcn',
-        }
+            'loss_func': 'triplet',
+            'MARGIN' : margin,
+            'triplet_lamda':triplet_lamda,
+            'hard' : False,
+            'feature_normalize':True
+        }  for margin in [0.3, 0.8, 2.0]
+        for triplet_lamda in [1, 5, 10]
+        
+    ]+
+    [
+        {
+            'Model' : 0,
+            'connection'        : 'cc',
+            'conv'              : 'gcn',
+            'loss_func': 'triplet',
+            'MARGIN' : margin,
+            'triplet_lamda':triplet_lamda,
+            'hard' : False,
+            'feature_normalize':False,
+        } for margin in [0.3, 0.8, 2.0]
+        for triplet_lamda in [1, 5, 10]
     ]
+#     
+#     +
+#     [
+#         {
+#             'Model' : 0,
+#             'connection'        : 'cc',
+#             'conv'              : 'gcn',
+#             'loss_func': 'triplet',
+#             'MARGIN' : margin,
+#             'triplet_lamda':1.0,
+#             'hard': True
+           
+#        } for margin in [0.1,0.2, 0.3, 0.4, 0.5]
+        
+#     ]
+#     
+   
+    
 }
 
 # Parse args

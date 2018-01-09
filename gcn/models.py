@@ -1,5 +1,5 @@
 from gcn.layers import DenseNet, GraphConvolution, Residual, FullyConnected, ConvolutionDenseNet
-from gcn.metrics import masked_accuracy, masked_softmax_cross_entropy, weighted_softmax_cross_entropy, triplet_softmax_cross_entropy
+from gcn.metrics import masked_accuracy, masked_softmax_cross_entropy, weighted_softmax_cross_entropy, triplet_no_w1_softmax_cross_entropy, triplet_no_w1_normalize_softmax_cross_entropy
 import tensorflow as tf
 import numpy as np
 from copy import copy
@@ -48,12 +48,20 @@ class GCN_MLP(object):
         layer_size = copy(self.model_config['layer_size'])
         layer_size.insert(0, self.input_dim)
         layer_size.append(self.output_dim)
+        print('layer_size', layer_size)
         sparse = True
         with tf.name_scope(self.name):
             self.global_step = tf.Variable(0, name='global_step', trainable=False)
+#            self.activations.append((self.inputs, self.inputs))
             self.activations.append(self.inputs)
-            for output_dim, layer_cls in zip(layer_size[1:], layer_type):
+            for i, (output_dim, layer_cls) in enumerate(zip(layer_size[1:], layer_type)):
                 # create Variables
+                relu_flag = True
+                if i==len(layer_size)-2:
+                    print('------')
+                    assert output_dim == self.output_dim
+                    relu_flag = False
+                    
                 self.layers.append(layer_cls(input=self.activations[-1],
                                              output_dim=output_dim,
                                              placeholders=self.placeholders,
@@ -61,14 +69,20 @@ class GCN_MLP(object):
                                              dropout=True,
                                              sparse_inputs=sparse,
                                              logging=self.logging,
-                                             use_theta= self.model_config['conv'] == 'chebytheta'))
+                                             use_theta= self.model_config['conv'] == 'chebytheta', 
+                                             relu_flag = relu_flag))
                 sparse = False
                 # Build sequential layer model
-                hidden = self.layers[-1]()  # build the graph, give layer inputs, return layer outpus
+                if relu_flag==False:                 
+                    hidden, self.return_no_w1 = self.layers[-1]()
+                else:
+                    hidden = self.layers[-1]()
                 self.activations.append(hidden)
+                
 
-            self.outputs = self.activations[-1]
-
+ #           self.outputs, self.output_previous = self.activations[-1]
+            self.outputs  = self.activations[-1]
+                
         # Store model variables for easy access
         variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=self.name)
         self.vars.update({var.op.name: var for var in variables})
@@ -124,10 +138,11 @@ class GCN_MLP(object):
             if self.model_config['loss_func'] == 'imbalance':
                 self.loss += weighted_softmax_cross_entropy(self.outputs, self.placeholders['labels'],
                                                             self.model_config['ws_beta'])
-            elif self.model_config['loss_func'] == 'triplet':
-                    self.loss += triplet_softmax_cross_entropy(self.outputs, self.placeholders['labels'], self.placeholders['triplet'],
-                                                             self.placeholders['labels_mask'], self.model_config['MARGIN'], self.model_config['triplet_lamda'])
-                                                 
+            elif self.model_config['loss_func'] == 'triplet': 
+                if self.model_config['feature_normalize']==True:
+                    self.loss += triplet_no_w1_normalize_softmax_cross_entropy(self.outputs, self.return_no_w1, self.placeholders['labels'], self.placeholders['triplet'], self.placeholders['labels_mask'], self.model_config['MARGIN'], self.model_config['triplet_lamda'])
+                else:
+                    self.loss += triplet_no_w1_softmax_cross_entropy(self.outputs, self.return_no_w1, self.placeholders['labels'], self.placeholders['triplet'], self.placeholders['labels_mask'], self.model_config['MARGIN'], self.model_config['triplet_lamda'])
             else:
                 self.loss += masked_softmax_cross_entropy(self.outputs, self.placeholders['labels'],
                                                       self.placeholders['labels_mask'])
