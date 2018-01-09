@@ -58,7 +58,7 @@ configuration ={
         'Model_to_predict'  : { 'Model' :0 }, # for model 16
         'Model19'           : 'union',        # 'union' | 'intersection'
         'classifier'        : 'svm',            # 'svm' | 'tree'
-        'svm_kernel'        : 'rbf',        # 'rbf' | 'poly' | 'rbf' | 'sigmoid'， model 23
+        'svm_kernel'        : 'rbf',        # 'rbf' | 'poly' | 'rbf' | 'sigmoid', model 23
         'gamma'             : 1e-5,         # gamma for svm, see scikit-learn document, model 23
         'svm_degree'        : 4,
         'tree_depth'        : None,
