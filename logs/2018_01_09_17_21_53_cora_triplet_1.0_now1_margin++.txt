@@ -1,0 +1,4231 @@
+Namespace(dataset='cora', loss_func=None, repeating=10, train_size=1.0, validate=None, verbose=False, ws_beta=None)
+{   'default': {   'Model': 0,
+                   'Model11': 'nearest',
+                   'Model19': 'union',
+                   'Model_to_add_label': {'Model': 0},
+                   'Model_to_predict': {'Model': 0},
+                   'absorption_type': 'binary',
+                   'alpha': 1e-06,
+                   'beta': 0.05,
+                   'classifier': 'svm',
+                   'connection': 'cc',
+                   'conv': 'gcn',
+                   'dataset': 'cora',
+                   'drop_inter_class_edge': False,
+                   'dropout': 0.5,
+                   'early_stopping': 0,
+                   'epochs': 200,
+                   'feature': 'bow',
+                   'gamma': 1e-05,
+                   'k': -1,
+                   'lambda': 0,
+                   'layer_size': [16],
+                   'learning_rate': 0.02,
+                   'logdir': '',
+                   'logging': False,
+                   'loss_func': 'default',
+                   'max_degree': 2,
+                   'max_triplet': 1000,
+                   'mu': 1,
+                   'name': '',
+                   'poly_parameters': [1, -2, 1],
+                   'random_seed': 1515489717,
+                   'smoothing': None,
+                   'svm_degree': 4,
+                   'svm_kernel': 'rbf',
+                   't': 500,
+                   't2': 100,
+                   'taubin_f': 0.7,
+                   'taubin_lambda': 0.3,
+                   'taubin_mu': -0.31,
+                   'taubin_repeat': 5,
+                   'taubin_t': 0.2,
+                   'threads': 64,
+                   'train': True,
+                   'train_size': 1.0,
+                   'tree_depth': None,
+                   'validate': False,
+                   'validation_size': 20,
+                   'weight_decay': 0.0005,
+                   'ws_beta': 20},
+    'model_list': [   {   'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False},
+                      {   'MARGIN': 4,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 4,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 4,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 12,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 12,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 12,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': True,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 4,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 4,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 4,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 8,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10},
+                      {   'MARGIN': 12,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 1},
+                      {   'MARGIN': 12,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 5},
+                      {   'MARGIN': 12,
+                          'Model': 0,
+                          'connection': 'cc',
+                          'conv': 'gcn',
+                          'feature_normalize': False,
+                          'hard': False,
+                          'loss_func': 'triplet',
+                          'triplet_lamda': 10}],
+    'repeating': 10}
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.67288 accuracy= 0.59400 time= 0.01672
+accuracy of each class= [0.0, 0.0, 0.89411759, 0.98757786, 0.49253729, 0.53846157, 0.028571429]
+Total time=13.787213802337646s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.00758 accuracy= 0.59000 time= 0.02909
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.49253729, 0.53846157, 0.057142857]
+Total time=17.883852005004883s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.20817 accuracy= 0.58600 time= 0.03971
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.43283582, 0.57692307, 0.057142857]
+Total time=18.53659701347351s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.45139 accuracy= 0.58600 time= 0.02920
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.43283582, 0.57692307, 0.057142857]
+Total time=18.500179529190063s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.00758 accuracy= 0.59000 time= 0.02515
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.49253729, 0.53846157, 0.057142857]
+Total time=18.205262184143066s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.20817 accuracy= 0.58600 time= 0.02872
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.43283582, 0.57692307, 0.057142857]
+Total time=18.716668605804443s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.45145 accuracy= 0.58600 time= 0.01448
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.43283582, 0.57692307, 0.057142857]
+Total time=15.554153442382812s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.00759 accuracy= 0.59000 time= 0.01862
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.49253729, 0.53846157, 0.057142857]
+Total time=18.722291707992554s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.20819 accuracy= 0.58600 time= 0.02061
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.43283582, 0.57692307, 0.057142857]
+Total time=18.27945899963379s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.45149 accuracy= 0.58600 time= 0.02600
+accuracy of each class= [0.0, 0.0, 0.88235289, 0.97515553, 0.43283582, 0.57692307, 0.057142857]
+Total time=18.662808895111084s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 2.97347 accuracy= 0.61800 time= 0.01735
+accuracy of each class= [0.0, 0.0, 0.94117641, 0.92546606, 0.62686568, 0.57692307, 0.22857143]
+Total time=16.54826521873474s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 5.89599 accuracy= 0.60400 time= 0.01861
+accuracy of each class= [0.0, 0.0, 0.94117641, 0.89441019, 0.67164177, 0.50000006, 0.19999999]
+Total time=16.48048186302185s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.81256 accuracy= 0.60200 time= 0.03063
+accuracy of each class= [0.0, 0.0, 0.92941171, 0.93167734, 0.64179105, 0.53846157, 0.028571429]
+Total time=16.273128509521484s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 6.14206 accuracy= 0.61400 time= 0.02336
+accuracy of each class= [0.0, 0.0, 0.94117641, 0.92546606, 0.62686568, 0.57692307, 0.17142858]
+Total time=16.872040033340454s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 21.47461 accuracy= 0.60200 time= 0.01338
+accuracy of each class= [0.0, 0.0, 0.92941171, 0.90062135, 0.67164177, 0.50000006, 0.17142858]
+Total time=16.14228320121765s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 48.84252 accuracy= 0.60400 time= 0.01743
+accuracy of each class= [0.0, 0.0, 0.92941171, 0.93167734, 0.64179105, 0.53846157, 0.057142857]
+Total time=16.418290853500366s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 9.89193 accuracy= 0.61400 time= 0.02353
+accuracy of each class= [0.0, 0.0, 0.94117641, 0.9192549, 0.62686568, 0.59615386, 0.17142858]
+Total time=16.139440298080444s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 40.90943 accuracy= 0.59800 time= 0.02311
+accuracy of each class= [0.0, 0.0, 0.92941171, 0.90062135, 0.67164177, 0.50000006, 0.11428571]
+Total time=17.040887355804443s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  1  6 11  4  3  1]
+[[1376, 0], [2255, 1], [357, 2], [1466, 2], [1723, 2], [1745, 2], [2523, 2], [2596, 2], [216, 3], [351, 3], [520, 3], [649, 3], [673, 3], [944, 3], [1511, 3], [1576, 3], [1864, 3], [1950, 3], [1995, 3], [209, 4], [1230, 4], [2265, 4], [2498, 4], [47, 5], [360, 5], [739, 5], [2458, 6]]
+[  1.   1.   6.  11.   4.   3.   1.]
+not hard (2888, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 88.49628 accuracy= 0.60400 time= 0.01789
+accuracy of each class= [0.0, 0.0, 0.92941171, 0.93167734, 0.64179105, 0.53846157, 0.057142857]
+Total time=14.5910325050354s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.52126 accuracy= 0.65400 time= 0.01471
+accuracy of each class= [0.26923075, 0.875, 0.82608694, 0.85161299, 0.86666667, 0.056603774, 0.030303027]
+Total time=15.186493873596191s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.02217 accuracy= 0.63400 time= 0.01905
+accuracy of each class= [0.30769232, 0.77083325, 0.768116, 0.81290334, 0.93333328, 0.018867925, 0.0]
+Total time=17.6242778301239s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.32268 accuracy= 0.59400 time= 0.01909
+accuracy of each class= [0.25, 0.70833325, 0.40579706, 0.84516132, 0.89999998, 0.18867925, 0.0]
+Total time=18.297163724899292s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.67131 accuracy= 0.59200 time= 0.01696
+accuracy of each class= [0.25, 0.70833325, 0.40579706, 0.84516132, 0.89999998, 0.16981132, 0.0]
+Total time=17.380444049835205s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.02216 accuracy= 0.63400 time= 0.01344
+accuracy of each class= [0.30769232, 0.77083325, 0.768116, 0.81290334, 0.93333328, 0.018867925, 0.0]
+Total time=18.303706645965576s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.32269 accuracy= 0.59400 time= 0.01832
+accuracy of each class= [0.25, 0.70833325, 0.40579706, 0.84516132, 0.89999998, 0.18867925, 0.0]
+Total time=17.9251766204834s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.67118 accuracy= 0.59200 time= 0.03465
+accuracy of each class= [0.25, 0.70833325, 0.40579706, 0.84516132, 0.89999998, 0.16981132, 0.0]
+Total time=18.735883235931396s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.02218 accuracy= 0.63400 time= 0.02369
+accuracy of each class= [0.30769232, 0.77083325, 0.768116, 0.81290334, 0.93333328, 0.018867925, 0.0]
+Total time=17.99467182159424s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.32263 accuracy= 0.59400 time= 0.02320
+accuracy of each class= [0.25, 0.70833325, 0.40579706, 0.84516132, 0.89999998, 0.18867925, 0.0]
+Total time=18.77527403831482s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.67110 accuracy= 0.59200 time= 0.01924
+accuracy of each class= [0.25, 0.70833325, 0.40579706, 0.84516132, 0.89999998, 0.16981132, 0.0]
+Total time=17.638460874557495s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.38354 accuracy= 0.65600 time= 0.02560
+accuracy of each class= [0.1923077, 0.875, 0.9130435, 0.81290329, 0.93333328, 0.056603774, 0.0]
+Total time=16.824662446975708s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 13.60571 accuracy= 0.57400 time= 0.01383
+accuracy of each class= [0.1923077, 0.85416657, 0.94202894, 0.5354839, 0.97777772, 0.0, 0.0]
+Total time=16.14076018333435s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 19.11846 accuracy= 0.59200 time= 0.02070
+accuracy of each class= [0.3269231, 0.87499988, 0.92753619, 0.5354839, 0.96666658, 0.056603774, 0.0]
+Total time=16.718254327774048s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.38078 accuracy= 0.65600 time= 0.11662
+accuracy of each class= [0.1923077, 0.875, 0.9130435, 0.81290329, 0.93333328, 0.056603774, 0.0]
+Total time=16.05996799468994s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 33.36782 accuracy= 0.57400 time= 0.01113
+accuracy of each class= [0.1923077, 0.85416657, 0.94202894, 0.5354839, 0.97777772, 0.0, 0.0]
+Total time=16.755242824554443s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 56.47535 accuracy= 0.58000 time= 0.01245
+accuracy of each class= [0.3269231, 0.87499988, 0.94202894, 0.50967747, 0.9555555, 0.018867925, 0.0]
+Total time=15.482662439346313s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.38078 accuracy= 0.65600 time= 0.02098
+accuracy of each class= [0.1923077, 0.875, 0.9130435, 0.81290329, 0.93333328, 0.056603774, 0.0]
+Total time=16.880797624588013s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 53.36784 accuracy= 0.57400 time= 0.02458
+accuracy of each class= [0.1923077, 0.85416657, 0.94202894, 0.5354839, 0.97777772, 0.0, 0.0]
+Total time=16.579528331756592s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [3 3 5 8 6 1 1]
+[[304, 0], [1527, 0], [2171, 0], [36, 1], [1772, 1], [1790, 1], [364, 2], [534, 2], [1035, 2], [1250, 2], [1339, 2], [207, 3], [235, 3], [835, 3], [914, 3], [1126, 3], [1442, 3], [1820, 3], [2012, 3], [286, 4], [912, 4], [956, 4], [1157, 4], [2416, 4], [2672, 4], [1619, 5], [2458, 6]]
+[ 3.  3.  5.  8.  6.  1.  1.]
+not hard (2474, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 96.41826 accuracy= 0.58200 time= 0.02669
+accuracy of each class= [0.3269231, 0.87499988, 0.94202894, 0.51612908, 0.9555555, 0.018867925, 0.0]
+Total time=16.52819848060608s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.45411 accuracy= 0.69800 time= 0.01748
+accuracy of each class= [0.19696969, 0.89473701, 0.94805175, 0.85624969, 0.57142848, 0.90566039, 0.0]
+Total time=13.807637929916382s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.01475 accuracy= 0.64600 time= 0.02049
+accuracy of each class= [0.19696969, 0.92105275, 0.98701286, 0.75624979, 0.71428561, 0.28301889, 0.27586207]
+Total time=18.62524724006653s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.39692 accuracy= 0.59000 time= 0.01958
+accuracy of each class= [0.21212119, 0.92105275, 0.97402591, 0.6312499, 0.72727263, 0.075471699, 0.34482759]
+Total time=17.887798309326172s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.82339 accuracy= 0.58800 time= 0.01911
+accuracy of each class= [0.21212119, 0.92105275, 0.97402591, 0.62499988, 0.72727263, 0.075471699, 0.34482759]
+Total time=18.611040592193604s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.01474 accuracy= 0.64600 time= 0.01874
+accuracy of each class= [0.19696969, 0.92105275, 0.98701286, 0.75624979, 0.71428561, 0.28301889, 0.27586207]
+Total time=13.375399351119995s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.39691 accuracy= 0.59000 time= 0.01960
+accuracy of each class= [0.21212119, 0.92105275, 0.97402591, 0.6312499, 0.72727263, 0.075471699, 0.34482759]
+Total time=16.093996047973633s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.82344 accuracy= 0.58800 time= 0.01508
+accuracy of each class= [0.21212119, 0.92105275, 0.97402591, 0.62499988, 0.72727263, 0.075471699, 0.34482759]
+Total time=15.135472059249878s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.01474 accuracy= 0.64600 time= 0.02013
+accuracy of each class= [0.19696969, 0.92105275, 0.98701286, 0.75624979, 0.71428561, 0.28301889, 0.27586207]
+Total time=15.867356061935425s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.39687 accuracy= 0.59000 time= 0.01536
+accuracy of each class= [0.21212119, 0.92105275, 0.97402591, 0.6312499, 0.72727263, 0.075471699, 0.34482759]
+Total time=15.469826698303223s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.82329 accuracy= 0.58800 time= 0.01543
+accuracy of each class= [0.21212119, 0.92105275, 0.97402591, 0.62499988, 0.72727263, 0.075471699, 0.34482759]
+Total time=16.145923614501953s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.71401 accuracy= 0.69400 time= 0.01963
+accuracy of each class= [0.15151513, 0.8684212, 0.94805175, 0.86874974, 0.63636357, 0.81132078, 0.0]
+Total time=14.171150207519531s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.51038 accuracy= 0.69600 time= 0.01665
+accuracy of each class= [0.19696969, 0.89473701, 0.96103883, 0.81874973, 0.68831158, 0.81132078, 0.0]
+Total time=14.369210481643677s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.42105 accuracy= 0.70000 time= 0.01795
+accuracy of each class= [0.19696969, 0.89473701, 0.98701286, 0.81249982, 0.67532462, 0.84905654, 0.0]
+Total time=14.353494644165039s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.66385 accuracy= 0.69400 time= 0.02657
+accuracy of each class= [0.15151513, 0.8684212, 0.94805175, 0.8749997, 0.63636357, 0.79245287, 0.0]
+Total time=14.094640731811523s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 24.90311 accuracy= 0.69600 time= 0.01440
+accuracy of each class= [0.19696969, 0.89473701, 0.94805175, 0.8374998, 0.68831158, 0.7735849, 0.0]
+Total time=14.64672327041626s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 33.13480 accuracy= 0.69600 time= 0.01773
+accuracy of each class= [0.19696969, 0.89473701, 0.99999982, 0.81874973, 0.64935052, 0.81132078, 0.0]
+Total time=13.56719446182251s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.66385 accuracy= 0.69400 time= 0.01958
+accuracy of each class= [0.15151513, 0.8684212, 0.94805175, 0.8749997, 0.63636357, 0.79245287, 0.0]
+Total time=14.362892150878906s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 44.83052 accuracy= 0.69600 time= 0.01470
+accuracy of each class= [0.19696969, 0.89473701, 0.94805175, 0.8374998, 0.68831158, 0.7735849, 0.0]
+Total time=14.198057413101196s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 3 5 8 5 3 1]
+[[964, 0], [2049, 0], [910, 1], [1335, 1], [2090, 1], [173, 2], [609, 2], [806, 2], [889, 2], [2655, 2], [1166, 3], [1613, 3], [1938, 3], [2009, 3], [2301, 3], [2304, 3], [2529, 3], [2579, 3], [39, 4], [245, 4], [286, 4], [2249, 4], [2250, 4], [37, 5], [671, 5], [1978, 5], [1972, 6]]
+[ 2.  3.  5.  8.  5.  3.  1.]
+not hard (2308, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 68.93880 accuracy= 0.68600 time= 0.02368
+accuracy of each class= [0.19696969, 0.89473701, 0.99999982, 0.81249982, 0.64935052, 0.73584902, 0.0]
+Total time=14.762489080429077s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.67123 accuracy= 0.59200 time= 0.01569
+accuracy of each class= [0.0, 0.48571426, 0.97260273, 0.80555522, 0.41250002, 0.85714287, 0.11363637]
+Total time=12.621745586395264s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.98769 accuracy= 0.57800 time= 0.02575
+accuracy of each class= [0.016393444, 0.14285715, 0.98630136, 0.73611087, 0.51250005, 0.92063493, 0.13636366]
+Total time=16.253424882888794s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.08590 accuracy= 0.59200 time= 0.02083
+accuracy of each class= [0.032786887, 0.11428571, 0.98630136, 0.66666645, 0.66250002, 0.87301588, 0.31818184]
+Total time=15.597764730453491s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.18300 accuracy= 0.55800 time= 0.02987
+accuracy of each class= [0.14754099, 0.028571429, 0.98630136, 0.72222197, 0.51250005, 0.71428567, 0.15909091]
+Total time=15.976046085357666s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.98769 accuracy= 0.57800 time= 0.01960
+accuracy of each class= [0.016393444, 0.14285715, 0.98630136, 0.73611087, 0.51250005, 0.92063493, 0.13636366]
+Total time=15.971994876861572s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.08592 accuracy= 0.59200 time= 0.02095
+accuracy of each class= [0.032786887, 0.11428571, 0.98630136, 0.66666645, 0.66250002, 0.87301588, 0.31818184]
+Total time=16.3808114528656s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.18304 accuracy= 0.55800 time= 0.07035
+accuracy of each class= [0.14754099, 0.028571429, 0.98630136, 0.72222197, 0.51250005, 0.71428567, 0.15909091]
+Total time=15.500327348709106s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.98770 accuracy= 0.57800 time= 0.02115
+accuracy of each class= [0.016393444, 0.14285715, 0.98630136, 0.73611087, 0.51250005, 0.92063493, 0.13636366]
+Total time=16.326124906539917s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.08580 accuracy= 0.59200 time= 0.02817
+accuracy of each class= [0.032786887, 0.11428571, 0.98630136, 0.66666645, 0.66250002, 0.87301588, 0.31818184]
+Total time=15.446425199508667s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.18284 accuracy= 0.55800 time= 0.02452
+accuracy of each class= [0.14754099, 0.028571429, 0.98630136, 0.72222197, 0.51250005, 0.71428567, 0.15909091]
+Total time=16.10806393623352s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.07249 accuracy= 0.62000 time= 0.02108
+accuracy of each class= [0.1147541, 0.51428574, 0.94520539, 0.77083308, 0.51250005, 0.8888889, 0.18181819]
+Total time=13.491374492645264s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.99705 accuracy= 0.60000 time= 0.01940
+accuracy of each class= [0.22950821, 0.51428574, 0.95890415, 0.6180554, 0.55000001, 0.7460317, 0.40909097]
+Total time=14.679462194442749s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 6.96427 accuracy= 0.59400 time= 0.01312
+accuracy of each class= [0.16393444, 0.54285711, 0.98630136, 0.64583313, 0.55000001, 0.85714287, 0.11363637]
+Total time=14.171723127365112s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 5.99714 accuracy= 0.61600 time= 0.01969
+accuracy of each class= [0.18032788, 0.51428574, 0.94520539, 0.73611087, 0.48750004, 0.8888889, 0.20454547]
+Total time=14.52078127861023s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 13.66969 accuracy= 0.58200 time= 0.01565
+accuracy of each class= [0.21311475, 0.51428574, 0.97260273, 0.61111093, 0.53750002, 0.87301588, 0.06818182]
+Total time=13.768765449523926s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 21.13121 accuracy= 0.57400 time= 0.01994
+accuracy of each class= [0.22950819, 0.51428574, 0.98630136, 0.60416651, 0.5, 0.80952382, 0.11363637]
+Total time=14.589778661727905s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 9.64309 accuracy= 0.60800 time= 0.03976
+accuracy of each class= [0.19672132, 0.51428574, 0.94520539, 0.74305528, 0.47500002, 0.84126985, 0.15909091]
+Total time=14.227898597717285s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 28.44490 accuracy= 0.57800 time= 0.01669
+accuracy of each class= [0.24590163, 0.51428574, 0.97260273, 0.61111093, 0.52499998, 0.84126985, 0.045454547]
+Total time=14.28322720527649s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [1 3 8 6 3 4 2]
+[[1905, 0], [2048, 1], [2144, 1], [2402, 1], [59, 2], [859, 2], [905, 2], [1007, 2], [1123, 2], [1431, 2], [1718, 2], [2307, 2], [158, 3], [477, 3], [1108, 3], [1364, 3], [1473, 3], [2692, 3], [385, 4], [1481, 4], [1795, 4], [644, 5], [645, 5], [1500, 5], [2058, 5], [1333, 6], [2030, 6]]
+[ 1.  3.  8.  6.  3.  4.  2.]
+not hard (2334, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 48.32860 accuracy= 0.57400 time= 0.04284
+accuracy of each class= [0.27868855, 0.48571426, 0.98630136, 0.60416651, 0.48750001, 0.79365075, 0.11363637]
+Total time=13.721062183380127s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.73555 accuracy= 0.56000 time= 0.02056
+accuracy of each class= [0.014705881, 0.021739131, 0.90000015, 0.8364777, 0.47435901, 0.95744658, 0.0]
+Total time=12.724359035491943s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.86981 accuracy= 0.59400 time= 0.01543
+accuracy of each class= [0.19117646, 0.0, 0.97142881, 0.72955954, 0.66666675, 0.80851054, 0.3125]
+Total time=15.75532841682434s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.95774 accuracy= 0.55800 time= 0.02160
+accuracy of each class= [0.058823526, 0.10869566, 0.92857158, 0.761006, 0.50000012, 0.87234026, 0.125]
+Total time=16.407950401306152s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.33978 accuracy= 0.56600 time= 0.02109
+accuracy of each class= [0.0, 0.043478262, 0.95714307, 0.761006, 0.53846163, 0.8936168, 0.28125]
+Total time=15.326778888702393s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.86981 accuracy= 0.59400 time= 0.01796
+accuracy of each class= [0.19117646, 0.0, 0.97142881, 0.72955954, 0.66666675, 0.80851054, 0.3125]
+Total time=13.463290452957153s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 31.95773 accuracy= 0.55800 time= 0.02664
+accuracy of each class= [0.058823526, 0.10869566, 0.92857158, 0.761006, 0.50000012, 0.87234026, 0.125]
+Total time=16.211798667907715s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.33978 accuracy= 0.56600 time= 0.02236
+accuracy of each class= [0.0, 0.043478262, 0.95714307, 0.761006, 0.53846163, 0.8936168, 0.28125]
+Total time=15.922009706497192s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.86980 accuracy= 0.59400 time= 0.01893
+accuracy of each class= [0.19117646, 0.0, 0.97142881, 0.72955954, 0.66666675, 0.80851054, 0.3125]
+Total time=16.197009801864624s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 51.95774 accuracy= 0.55800 time= 0.02091
+accuracy of each class= [0.058823526, 0.10869566, 0.92857158, 0.761006, 0.50000012, 0.87234026, 0.125]
+Total time=15.590567111968994s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.33987 accuracy= 0.56600 time= 0.02441
+accuracy of each class= [0.0, 0.043478262, 0.95714307, 0.761006, 0.53846163, 0.8936168, 0.28125]
+Total time=16.218284845352173s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.81333 accuracy= 0.54000 time= 0.01612
+accuracy of each class= [0.029411763, 0.043478262, 0.90000015, 0.75471675, 0.47435901, 0.97872317, 0.0]
+Total time=13.477803230285645s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 13.96228 accuracy= 0.52200 time= 0.01776
+accuracy of each class= [0.029411763, 0.043478262, 0.92857164, 0.71069157, 0.44871804, 0.93617004, 0.0]
+Total time=14.436474323272705s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.33191 accuracy= 0.53200 time= 0.02246
+accuracy of each class= [0.058823526, 0.065217391, 0.95714307, 0.70440233, 0.42307696, 0.91489339, 0.125]
+Total time=13.923851251602173s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.81329 accuracy= 0.54000 time= 0.03589
+accuracy of each class= [0.029411763, 0.043478262, 0.90000015, 0.75471675, 0.47435901, 0.97872317, 0.0]
+Total time=14.210593461990356s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 33.89767 accuracy= 0.52400 time= 0.02633
+accuracy of each class= [0.029411763, 0.043478262, 0.92857164, 0.71069157, 0.44871804, 0.95744658, 0.0]
+Total time=14.293387413024902s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 61.32126 accuracy= 0.52200 time= 0.01380
+accuracy of each class= [0.044117644, 0.065217391, 0.95714307, 0.69182366, 0.39743596, 0.91489339, 0.125]
+Total time=13.950757026672363s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.81329 accuracy= 0.54000 time= 0.01682
+accuracy of each class= [0.029411763, 0.043478262, 0.90000015, 0.75471675, 0.47435901, 0.97872317, 0.0]
+Total time=14.55941653251648s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 53.89588 accuracy= 0.52400 time= 0.02269
+accuracy of each class= [0.029411763, 0.043478262, 0.92857164, 0.71069157, 0.44871804, 0.95744658, 0.0]
+Total time=13.714841842651367s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [2 2 4 7 5 5 2]
+[[1357, 0], [1841, 0], [741, 1], [1790, 1], [978, 2], [1617, 2], [2083, 2], [2596, 2], [380, 3], [473, 3], [1098, 3], [1678, 3], [1996, 3], [2314, 3], [2381, 3], [177, 4], [665, 4], [924, 4], [1153, 4], [1474, 4], [129, 5], [441, 5], [490, 5], [1553, 5], [1885, 5], [596, 6], [2690, 6]]
+[ 2.  2.  4.  7.  5.  5.  2.]
+not hard (2146, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 101.31718 accuracy= 0.52200 time= 0.01810
+accuracy of each class= [0.044117644, 0.065217391, 0.95714307, 0.69182366, 0.39743596, 0.91489339, 0.125]
+Total time=14.417845487594604s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.45601 accuracy= 0.66000 time= 0.01983
+accuracy of each class= [0.87931031, 0.52499998, 0.89473701, 0.84137928, 0.32941175, 0.74074072, 0.0]
+Total time=12.69684362411499s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.01097 accuracy= 0.66600 time= 0.03461
+accuracy of each class= [0.86206901, 0.60000002, 0.96052647, 0.68965518, 0.57647055, 0.68518519, 0.0]
+Total time=15.655987977981567s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.13761 accuracy= 0.62000 time= 0.01499
+accuracy of each class= [0.79310346, 0.67500007, 0.93421066, 0.50344837, 0.68235296, 0.64814812, 0.0]
+Total time=15.394264936447144s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.36075 accuracy= 0.59400 time= 0.02632
+accuracy of each class= [0.87931031, 0.52499998, 0.94736856, 0.56551725, 0.3882353, 0.68518519, 0.023809522]
+Total time=16.479048252105713s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.01098 accuracy= 0.66600 time= 0.01628
+accuracy of each class= [0.86206901, 0.60000002, 0.96052647, 0.68965518, 0.57647055, 0.68518519, 0.0]
+Total time=15.736438751220703s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.13765 accuracy= 0.62000 time= 0.01748
+accuracy of each class= [0.79310346, 0.67500007, 0.93421066, 0.50344837, 0.68235296, 0.64814812, 0.0]
+Total time=15.888275146484375s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.36063 accuracy= 0.59400 time= 0.01679
+accuracy of each class= [0.87931031, 0.52499998, 0.94736856, 0.56551725, 0.3882353, 0.68518519, 0.023809522]
+Total time=15.55498480796814s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.01099 accuracy= 0.66600 time= 0.01762
+accuracy of each class= [0.86206901, 0.60000002, 0.96052647, 0.68965518, 0.57647055, 0.68518519, 0.0]
+Total time=16.395197868347168s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.13764 accuracy= 0.62000 time= 0.01249
+accuracy of each class= [0.79310346, 0.67500007, 0.93421066, 0.50344837, 0.68235296, 0.64814812, 0.0]
+Total time=15.353297233581543s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.36066 accuracy= 0.59400 time= 0.01422
+accuracy of each class= [0.87931031, 0.52499998, 0.94736856, 0.56551725, 0.3882353, 0.68518519, 0.023809522]
+Total time=15.780514478683472s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.44175 accuracy= 0.64200 time= 0.01210
+accuracy of each class= [0.87931031, 0.75000006, 0.94736856, 0.71724141, 0.34117648, 0.64814812, 0.0]
+Total time=13.853485584259033s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.28018 accuracy= 0.64200 time= 0.01796
+accuracy of each class= [0.82758623, 0.82500005, 0.97368437, 0.65517247, 0.36470589, 0.74074072, 0.0]
+Total time=14.420686960220337s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 10.65134 accuracy= 0.64400 time= 0.01981
+accuracy of each class= [0.81034493, 0.92500013, 0.94736856, 0.60000008, 0.47058821, 0.72222215, 0.0]
+Total time=13.79791259765625s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 6.69908 accuracy= 0.64400 time= 0.02164
+accuracy of each class= [0.87931031, 0.70000005, 0.96052647, 0.73103446, 0.34117648, 0.64814812, 0.0]
+Total time=14.414562225341797s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.22538 accuracy= 0.63600 time= 0.01603
+accuracy of each class= [0.84482753, 0.80000007, 0.97368437, 0.66206896, 0.32941175, 0.72222215, 0.0]
+Total time=13.95018196105957s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 41.50866 accuracy= 0.65000 time= 0.01747
+accuracy of each class= [0.86206895, 0.9000001, 0.94736856, 0.60689664, 0.47058821, 0.72222215, 0.0]
+Total time=14.34359097480774s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 10.55377 accuracy= 0.64400 time= 0.01828
+accuracy of each class= [0.87931031, 0.72500002, 0.96052647, 0.7241379, 0.34117648, 0.64814812, 0.0]
+Total time=13.997015476226807s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 41.12525 accuracy= 0.63400 time= 0.01438
+accuracy of each class= [0.84482753, 0.80000007, 0.96052647, 0.66206896, 0.32941175, 0.72222215, 0.0]
+Total time=14.036713123321533s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [6 2 4 7 3 4 1]
+[[211, 0], [1927, 0], [2018, 0], [2068, 0], [2099, 0], [2156, 0], [1258, 1], [2093, 1], [1287, 2], [1306, 2], [1709, 2], [1751, 2], [291, 3], [697, 3], [886, 3], [932, 3], [1934, 3], [1988, 3], [2032, 3], [691, 4], [947, 4], [2473, 4], [448, 5], [643, 5], [1690, 5], [1883, 5], [414, 6]]
+[ 6.  2.  4.  7.  3.  4.  1.]
+not hard (2242, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 80.28559 accuracy= 0.65000 time= 0.02865
+accuracy of each class= [0.87931031, 0.9000001, 0.94736856, 0.60689664, 0.45882353, 0.72222215, 0.0]
+Total time=13.92905068397522s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.61269 accuracy= 0.59400 time= 0.01179
+accuracy of each class= [0.18571429, 0.0, 0.87142879, 0.86144584, 0.88235289, 0.018867925, 0.54285711]
+Total time=13.869849443435669s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.86040 accuracy= 0.59200 time= 0.02509
+accuracy of each class= [0.17142858, 0.0, 0.95714307, 0.7951808, 0.91176462, 0.33962265, 0.14285715]
+Total time=15.155974388122559s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.99665 accuracy= 0.59600 time= 0.02453
+accuracy of each class= [0.20000002, 0.0, 0.9142859, 0.88554221, 0.76470578, 0.2264151, 0.25714287]
+Total time=16.01834774017334s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.04132 accuracy= 0.60600 time= 0.04532
+accuracy of each class= [0.21428573, 0.0, 0.9142859, 0.89156634, 0.74999994, 0.3773585, 0.14285715]
+Total time=14.167912483215332s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.86026 accuracy= 0.59200 time= 0.01870
+accuracy of each class= [0.17142858, 0.0, 0.95714307, 0.7951808, 0.91176462, 0.33962265, 0.14285715]
+Total time=15.0245201587677s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 31.99664 accuracy= 0.59600 time= 0.01730
+accuracy of each class= [0.20000002, 0.0, 0.9142859, 0.88554221, 0.76470578, 0.2264151, 0.25714287]
+Total time=16.299277544021606s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.04130 accuracy= 0.60600 time= 0.03431
+accuracy of each class= [0.21428573, 0.0, 0.9142859, 0.89156634, 0.74999994, 0.3773585, 0.14285715]
+Total time=15.752797603607178s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.86028 accuracy= 0.59200 time= 0.02004
+accuracy of each class= [0.17142858, 0.0, 0.95714307, 0.7951808, 0.91176462, 0.33962265, 0.14285715]
+Total time=16.153488397598267s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 51.99665 accuracy= 0.59600 time= 0.02232
+accuracy of each class= [0.20000002, 0.0, 0.9142859, 0.88554221, 0.76470578, 0.2264151, 0.25714287]
+Total time=15.328820943832397s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.04128 accuracy= 0.60600 time= 0.03147
+accuracy of each class= [0.21428573, 0.0, 0.9142859, 0.89156634, 0.74999994, 0.3773585, 0.14285715]
+Total time=15.493606805801392s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.77694 accuracy= 0.59600 time= 0.03953
+accuracy of each class= [0.24285713, 0.0, 0.94285733, 0.81325316, 0.89705873, 0.018867925, 0.51428568]
+Total time=13.834716081619263s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.70363 accuracy= 0.59200 time= 0.02193
+accuracy of each class= [0.22857143, 0.0, 0.97142881, 0.7951808, 0.86764693, 0.018867925, 0.57142854]
+Total time=14.411087274551392s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.29730 accuracy= 0.60000 time= 0.01786
+accuracy of each class= [0.24285716, 0.0, 0.94285733, 0.81325305, 0.88235289, 0.03773585, 0.57142854]
+Total time=14.000487804412842s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 6.99056 accuracy= 0.60200 time= 0.02105
+accuracy of each class= [0.21428572, 0.0, 0.92857158, 0.82530135, 0.89705873, 0.018867925, 0.62857139]
+Total time=14.232899188995361s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.75348 accuracy= 0.58800 time= 0.01230
+accuracy of each class= [0.21428573, 0.0, 0.97142881, 0.78313261, 0.88235289, 0.018867925, 0.57142854]
+Total time=13.566907167434692s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 37.92591 accuracy= 0.59800 time= 0.02266
+accuracy of each class= [0.22857143, 0.0, 0.94285733, 0.80722898, 0.88235289, 0.056603774, 0.57142854]
+Total time=14.365155220031738s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 10.96549 accuracy= 0.60200 time= 0.02229
+accuracy of each class= [0.21428572, 0.0, 0.92857158, 0.82530135, 0.89705873, 0.018867925, 0.62857139]
+Total time=14.103086233139038s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 41.81372 accuracy= 0.59000 time= 0.02004
+accuracy of each class= [0.22857143, 0.0, 0.97142881, 0.78313261, 0.88235289, 0.018867925, 0.57142854]
+Total time=14.650721549987793s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [4 1 5 6 6 2 3]
+[[496, 0], [1631, 0], [2202, 0], [2211, 0], [1140, 1], [73, 2], [1243, 2], [1430, 2], [1566, 2], [2561, 2], [928, 3], [942, 3], [1016, 3], [1479, 3], [1823, 3], [2124, 3], [255, 4], [893, 4], [1639, 4], [1703, 4], [1969, 4], [2353, 4], [474, 5], [728, 5], [539, 6], [594, 6], [1660, 6]]
+[ 4.  1.  5.  6.  6.  2.  3.]
+not hard (2196, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 74.66508 accuracy= 0.59800 time= 0.02626
+accuracy of each class= [0.22857143, 0.0, 0.94285733, 0.80722898, 0.88235289, 0.056603774, 0.57142854]
+Total time=14.113622665405273s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.74365 accuracy= 0.53600 time= 0.01327
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.89261752, 0.72727263, 0.60416657, 0.58620691]
+Total time=13.24636721611023s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.95237 accuracy= 0.53800 time= 0.03285
+accuracy of each class= [0.012499999, 0.72222221, 0.012345679, 0.93959737, 0.68831164, 0.58333325, 0.68965518]
+Total time=15.806076049804688s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.06061 accuracy= 0.51600 time= 0.01584
+accuracy of each class= [0.024999999, 0.77777773, 0.012345679, 0.91946316, 0.62337655, 0.54166663, 0.55172414]
+Total time=16.24205994606018s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.14608 accuracy= 0.51200 time= 0.02054
+accuracy of each class= [0.024999999, 0.77777773, 0.012345679, 0.91275173, 0.62337655, 0.52083325, 0.55172414]
+Total time=15.067556619644165s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.95236 accuracy= 0.53800 time= 0.01554
+accuracy of each class= [0.012499999, 0.72222221, 0.012345679, 0.93959737, 0.68831164, 0.58333325, 0.68965518]
+Total time=16.566551208496094s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.06063 accuracy= 0.51600 time= 0.01439
+accuracy of each class= [0.024999999, 0.77777773, 0.012345679, 0.91946316, 0.62337655, 0.54166663, 0.55172414]
+Total time=15.742684125900269s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.14608 accuracy= 0.51200 time= 0.04133
+accuracy of each class= [0.024999999, 0.77777773, 0.012345679, 0.91275173, 0.62337655, 0.52083325, 0.55172414]
+Total time=16.026790142059326s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.95238 accuracy= 0.53800 time= 0.02348
+accuracy of each class= [0.012499999, 0.72222221, 0.012345679, 0.93959737, 0.68831164, 0.58333325, 0.68965518]
+Total time=15.21700143814087s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.06062 accuracy= 0.51600 time= 0.01143
+accuracy of each class= [0.024999999, 0.77777773, 0.012345679, 0.91946316, 0.62337655, 0.54166663, 0.55172414]
+Total time=16.24745774269104s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.14597 accuracy= 0.51200 time= 0.01971
+accuracy of each class= [0.024999999, 0.77777773, 0.012345679, 0.91275173, 0.62337655, 0.52083325, 0.55172414]
+Total time=15.861919164657593s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.23044 accuracy= 0.52800 time= 0.01739
+accuracy of each class= [0.0, 0.91666663, 0.012345679, 0.81879205, 0.71428567, 0.72916657, 0.62068963]
+Total time=14.302695989608765s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 5.44494 accuracy= 0.52200 time= 0.02252
+accuracy of each class= [0.0, 0.8611111, 0.012345679, 0.81208062, 0.71428567, 0.72916657, 0.62068963]
+Total time=14.55397891998291s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.74211 accuracy= 0.51800 time= 0.01803
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.80536914, 0.71428567, 0.68749988, 0.62068963]
+Total time=14.562167882919312s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 5.42805 accuracy= 0.51800 time= 0.01156
+accuracy of each class= [0.0, 0.91666663, 0.012345679, 0.81208062, 0.70129865, 0.66666657, 0.62068963]
+Total time=14.279739141464233s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 13.62692 accuracy= 0.52000 time= 0.01860
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.80536914, 0.71428567, 0.70833325, 0.62068963]
+Total time=14.24268889427185s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 23.21435 accuracy= 0.50800 time= 0.01488
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.79865772, 0.67532462, 0.66666657, 0.62068963]
+Total time=14.70984148979187s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.30373 accuracy= 0.51200 time= 0.01499
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.81208062, 0.67532462, 0.68749988, 0.58620691]
+Total time=14.210673332214355s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 26.55325 accuracy= 0.51800 time= 0.03151
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.79865772, 0.72727263, 0.70833325, 0.58620691]
+Total time=14.822956085205078s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  3  1 12  4  3  3]
+[[1137, 0], [1640, 1], [1854, 1], [2252, 1], [1263, 2], [1200, 3], [1213, 3], [1221, 3], [1231, 3], [1295, 3], [1633, 3], [1823, 3], [1893, 3], [2063, 3], [2152, 3], [2245, 3], [2634, 3], [435, 4], [1349, 4], [1422, 4], [2387, 4], [163, 5], [392, 5], [1829, 5], [596, 6], [611, 6], [891, 6]]
+[  1.   3.   1.  12.   4.   3.   3.]
+not hard (2740, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 47.79497 accuracy= 0.51000 time= 0.01884
+accuracy of each class= [0.0, 0.8888889, 0.012345679, 0.80536914, 0.6623376, 0.68749988, 0.62068963]
+Total time=14.907569885253906s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.73831 accuracy= 0.52800 time= 0.02918
+accuracy of each class= [0.5, 0.0, 0.87500012, 0.97972983, 0.09523809, 0.0625, 0.0]
+Total time=12.929186820983887s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.97967 accuracy= 0.60800 time= 0.02584
+accuracy of each class= [0.66129041, 0.24324325, 0.93181825, 0.87162173, 0.25, 0.45833328, 0.0]
+Total time=15.465292930603027s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.10766 accuracy= 0.60600 time= 0.01534
+accuracy of each class= [0.53225809, 0.40540537, 0.92045462, 0.87162173, 0.25, 0.49999994, 0.0]
+Total time=13.29711127281189s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.23914 accuracy= 0.61000 time= 0.01718
+accuracy of each class= [0.5, 0.40540537, 0.93181825, 0.88513523, 0.26190478, 0.49999994, 0.0]
+Total time=15.971950769424438s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.97967 accuracy= 0.60800 time= 0.01492
+accuracy of each class= [0.66129041, 0.24324325, 0.93181825, 0.87162173, 0.25, 0.45833328, 0.0]
+Total time=15.349509239196777s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.10765 accuracy= 0.60600 time= 0.01988
+accuracy of each class= [0.53225809, 0.40540537, 0.92045462, 0.87162173, 0.25, 0.49999994, 0.0]
+Total time=16.42298722267151s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.23916 accuracy= 0.61000 time= 0.02206
+accuracy of each class= [0.5, 0.40540537, 0.93181825, 0.88513523, 0.26190478, 0.49999994, 0.0]
+Total time=15.094030380249023s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.97966 accuracy= 0.60800 time= 0.01242
+accuracy of each class= [0.66129041, 0.24324325, 0.93181825, 0.87162173, 0.25, 0.45833328, 0.0]
+Total time=15.664114952087402s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.10759 accuracy= 0.60600 time= 0.01973
+accuracy of each class= [0.53225809, 0.40540537, 0.92045462, 0.87162173, 0.25, 0.49999994, 0.0]
+Total time=15.535312175750732s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.23909 accuracy= 0.61000 time= 0.02792
+accuracy of each class= [0.5, 0.40540537, 0.93181825, 0.88513523, 0.26190478, 0.49999994, 0.0]
+Total time=15.884292602539062s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.78493 accuracy= 0.58200 time= 0.01354
+accuracy of each class= [0.80645174, 0.13513513, 0.92045462, 0.95270288, 0.1547619, 0.020833332, 0.0]
+Total time=14.033318281173706s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 10.80888 accuracy= 0.59600 time= 0.01867
+accuracy of each class= [0.91935498, 0.13513513, 0.97727275, 0.84459478, 0.26190475, 0.0625, 0.0]
+Total time=14.68086290359497s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 14.65366 accuracy= 0.60000 time= 0.04836
+accuracy of each class= [0.88709688, 0.16216215, 0.98863637, 0.79729748, 0.32142857, 0.14583333, 0.0]
+Total time=14.273626327514648s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 8.78491 accuracy= 0.58200 time= 0.01331
+accuracy of each class= [0.80645174, 0.13513513, 0.92045462, 0.95270288, 0.1547619, 0.020833332, 0.0]
+Total time=14.528228282928467s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 30.54537 accuracy= 0.59600 time= 0.01934
+accuracy of each class= [0.91935498, 0.081081077, 0.97727275, 0.85810822, 0.26190475, 0.0625, 0.0]
+Total time=14.25403904914856s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 50.45045 accuracy= 0.59400 time= 0.01944
+accuracy of each class= [0.88709688, 0.13513513, 0.98863637, 0.79729748, 0.29761904, 0.14583333, 0.0]
+Total time=14.864604473114014s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.78490 accuracy= 0.58200 time= 0.02002
+accuracy of each class= [0.80645174, 0.13513513, 0.92045462, 0.95270288, 0.1547619, 0.020833332, 0.0]
+Total time=14.394723892211914s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 50.54535 accuracy= 0.59600 time= 0.01951
+accuracy of each class= [0.91935498, 0.081081077, 0.97727275, 0.85810822, 0.26190475, 0.0625, 0.0]
+Total time=15.186460018157959s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 5  2  5 10  2  2  1]
+[[323, 0], [354, 0], [1930, 0], [2055, 0], [2533, 0], [476, 1], [2325, 1], [156, 2], [227, 2], [1740, 2], [1765, 2], [2372, 2], [201, 3], [637, 3], [1054, 3], [1056, 3], [1861, 3], [1943, 3], [2471, 3], [2566, 3], [2676, 3], [2701, 3], [89, 4], [2674, 4], [1128, 5], [2273, 5], [404, 6]]
+[  5.   2.   5.  10.   2.   2.   1.]
+not hard (2586, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 90.39369 accuracy= 0.59400 time= 0.02101
+accuracy of each class= [0.88709688, 0.13513513, 0.98863637, 0.79729748, 0.29761904, 0.14583333, 0.0]
+Total time=14.015368461608887s
+
+name           : c16c_Model0
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 1.51758 accuracy= 0.66000 time= 0.01512
+accuracy of each class= [0.0, 0.89743608, 0.87837851, 0.824561, 0.93846148, 0.0, 0.82352942]
+Total time=13.421560287475586s
+
+name           : c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.88574 accuracy= 0.65000 time= 0.01521
+accuracy of each class= [0.0, 0.82051289, 0.78378379, 0.75438559, 0.93846148, 0.34782609, 0.85294116]
+Total time=15.687765121459961s
+
+name           : c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.06431 accuracy= 0.61000 time= 0.02236
+accuracy of each class= [0.0, 0.15384616, 0.77027035, 0.75438559, 0.87692302, 0.60869569, 0.82352942]
+Total time=16.080838918685913s
+
+name           : c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 22.12551 accuracy= 0.63200 time= 0.02050
+accuracy of each class= [0.0, 0.92307705, 0.77027035, 0.74853766, 0.87692302, 0.23913045, 0.79411757]
+Total time=15.732520341873169s
+
+name           : c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.88574 accuracy= 0.65000 time= 0.02192
+accuracy of each class= [0.0, 0.82051289, 0.78378379, 0.75438559, 0.93846148, 0.34782609, 0.85294116]
+Total time=16.258885145187378s
+
+name           : c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 32.06430 accuracy= 0.61000 time= 0.02497
+accuracy of each class= [0.0, 0.15384616, 0.77027035, 0.75438559, 0.87692302, 0.60869569, 0.82352942]
+Total time=15.738979816436768s
+
+name           : c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 62.12556 accuracy= 0.63200 time= 0.01946
+accuracy of each class= [0.0, 0.92307705, 0.77027035, 0.74853766, 0.87692302, 0.23913045, 0.79411757]
+Total time=15.921716928482056s
+
+name           : c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 11.88574 accuracy= 0.65000 time= 0.01755
+accuracy of each class= [0.0, 0.82051289, 0.78378379, 0.75438559, 0.93846148, 0.34782609, 0.85294116]
+Total time=15.391914129257202s
+
+name           : c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 52.06425 accuracy= 0.61000 time= 0.01579
+accuracy of each class= [0.0, 0.15384616, 0.77027035, 0.75438559, 0.87692302, 0.60869569, 0.82352942]
+Total time=15.557395696640015s
+
+name           : c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 102.12566 accuracy= 0.63200 time= 0.02405
+accuracy of each class= [0.0, 0.92307705, 0.77027035, 0.74853766, 0.87692302, 0.23913045, 0.79411757]
+Total time=15.726109504699707s
+
+name           : c16c_Model0_triplet_4_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.07598 accuracy= 0.61800 time= 0.02063
+accuracy of each class= [0.0, 0.92307705, 0.87837851, 0.66666639, 0.92307687, 0.0, 1.0]
+Total time=14.79433012008667s
+
+name           : c16c_Model0_triplet_4_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 3.51497 accuracy= 0.65400 time= 0.01508
+accuracy of each class= [0.056338031, 0.94871801, 0.87837851, 0.67251438, 0.89230764, 0.32608697, 0.97058815]
+Total time=13.85181188583374s
+
+name           : c16c_Model0_triplet_4_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 4.37632 accuracy= 0.63600 time= 0.01409
+accuracy of each class= [0.056338031, 0.94871801, 0.87837851, 0.6491226, 0.81538463, 0.32608697, 0.97058815]
+Total time=14.31447982788086s
+
+name           : c16c_Model0_triplet_8_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 6.11380 accuracy= 0.61600 time= 0.01730
+accuracy of each class= [0.0, 0.92307705, 0.87837851, 0.66081846, 0.92307687, 0.0, 1.0]
+Total time=13.54056429862976s
+
+name           : c16c_Model0_triplet_8_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 7.53929 accuracy= 0.65400 time= 0.01976
+accuracy of each class= [0.1830986, 0.94871801, 0.87837851, 0.66081846, 0.81538451, 0.28260872, 0.97058815]
+Total time=13.437850952148438s
+
+name           : c16c_Model0_triplet_8_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 12.22476 accuracy= 0.61400 time= 0.01292
+accuracy of each class= [0.042253524, 0.94871801, 0.87837851, 0.57309926, 0.86153835, 0.30434784, 1.0]
+Total time=13.372288703918457s
+
+name           : c16c_Model0_triplet_12_lamda1_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 9.59126 accuracy= 0.61600 time= 0.01495
+accuracy of each class= [0.0, 0.92307705, 0.87837851, 0.66081846, 0.92307687, 0.0, 1.0]
+Total time=14.022501468658447s
+
+name           : c16c_Model0_triplet_12_lamda5_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 15.72711 accuracy= 0.64200 time= 0.01284
+accuracy of each class= [0.21126761, 0.94871801, 0.89189196, 0.63742667, 0.73846143, 0.28260872, 0.97058815]
+Total time=12.98790168762207s
+
+name           : c16c_Model0_triplet_12_lamda10_1000
+logdir         : 
+dataset        : cora
+train_size     : 1.0
+learning_rate  : 0.02
+feature        : bow
+logging        : False
+labels of each class :  [ 1  2  3 10  6  1  4]
+[[794, 0], [350, 1], [484, 1], [1589, 2], [1715, 2], [2221, 2], [17, 3], [21, 3], [316, 3], [595, 3], [1951, 3], [2315, 3], [2338, 3], [2624, 3], [2663, 3], [2669, 3], [726, 4], [856, 4], [1018, 4], [1889, 4], [1966, 4], [2681, 4], [2275, 5], [491, 6], [850, 6], [1616, 6], [2161, 6]]
+[  1.   2.   3.  10.   6.   1.   4.]
+not hard (2682, 3)
+layer_size [1433, 16, 7]
+relu_flag True
+------
+relu_flag False
+training...
+Optimization Finished!
+Test set results: cost= 28.04690 accuracy= 0.59800 time= 0.02022
+accuracy of each class= [0.098591559, 0.94871801, 0.85135138, 0.56725127, 0.75384605, 0.28260872, 0.97058815]
+Total time=13.94163703918457s
+
+REPEAT	10
+DATASET 	train_size	valid_size	RESULTS 	STD     	NAME    
+cora    	1.0%    	20%     	0.607599	0.054917	c16c_Model0
+cora    	1.0%    	20%     	0.609599	0.037146	c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+cora    	1.0%    	20%     	0.586799	0.028329	c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+cora    	1.0%    	20%     	0.584399	0.031353	c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+cora    	1.0%    	20%     	0.609599	0.037146	c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+cora    	1.0%    	20%     	0.586799	0.028329	c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+cora    	1.0%    	20%     	0.584399	0.031353	c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+cora    	1.0%    	20%     	0.609599	0.037146	c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+cora    	1.0%    	20%     	0.586799	0.028329	c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+cora    	1.0%    	20%     	0.584399	0.031353	c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+cora    	1.0%    	20%     	0.609399	0.047984	c16c_Model0_triplet_4_lamda1_1000
+cora    	1.0%    	20%     	0.600199	0.051803	c16c_Model0_triplet_4_lamda5_1000
+cora    	1.0%    	20%     	0.601799	0.049650	c16c_Model0_triplet_4_lamda10_1000
+cora    	1.0%    	20%     	0.608199	0.049594	c16c_Model0_triplet_8_lamda1_1000
+cora    	1.0%    	20%     	0.597199	0.051662	c16c_Model0_triplet_8_lamda5_1000
+cora    	1.0%    	20%     	0.593999	0.052184	c16c_Model0_triplet_8_lamda10_1000
+cora    	1.0%    	20%     	0.606799	0.050629	c16c_Model0_triplet_12_lamda1_1000
+cora    	1.0%    	20%     	0.594999	0.050661	c16c_Model0_triplet_12_lamda5_1000
+cora    	1.0%    	20%     	0.591799	0.049465	c16c_Model0_triplet_12_lamda10_1000
+[ 1  2  3 10  6  1  4] [0.205, 0.459, 0.807, 0.874, 0.579, 0.474, 0.213, ]	c16c_Model0
+[ 1  2  3 10  6  1  4] [0.242, 0.422, 0.824, 0.806, 0.668, 0.498, 0.247, ]	c16c_Model0_triplet_4_lamda1_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.210, 0.386, 0.773, 0.781, 0.642, 0.511, 0.248, ]	c16c_Model0_triplet_4_lamda5_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.223, 0.433, 0.778, 0.793, 0.601, 0.475, 0.235, ]	c16c_Model0_triplet_4_lamda10_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.242, 0.422, 0.824, 0.806, 0.668, 0.498, 0.247, ]	c16c_Model0_triplet_8_lamda1_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.210, 0.386, 0.773, 0.781, 0.642, 0.511, 0.248, ]	c16c_Model0_triplet_8_lamda5_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.223, 0.433, 0.778, 0.793, 0.601, 0.475, 0.235, ]	c16c_Model0_triplet_8_lamda10_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.242, 0.422, 0.824, 0.806, 0.668, 0.498, 0.247, ]	c16c_Model0_triplet_12_lamda1_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.210, 0.386, 0.773, 0.781, 0.642, 0.511, 0.248, ]	c16c_Model0_triplet_12_lamda5_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.223, 0.433, 0.778, 0.793, 0.601, 0.475, 0.235, ]	c16c_Model0_triplet_12_lamda10_1000_feature_normalize
+[ 1  2  3 10  6  1  4] [0.242, 0.503, 0.835, 0.810, 0.621, 0.473, 0.255, ]	c16c_Model0_triplet_4_lamda1_1000
+[ 1  2  3 10  6  1  4] [0.268, 0.508, 0.854, 0.736, 0.644, 0.487, 0.277, ]	c16c_Model0_triplet_4_lamda5_1000
+[ 1  2  3 10  6  1  4] [0.274, 0.530, 0.856, 0.729, 0.646, 0.514, 0.243, ]	c16c_Model0_triplet_4_lamda10_1000
+[ 1  2  3 10  6  1  4] [0.245, 0.498, 0.835, 0.809, 0.618, 0.465, 0.263, ]	c16c_Model0_triplet_8_lamda1_1000
+[ 1  2  3 10  6  1  4] [0.279, 0.503, 0.853, 0.736, 0.633, 0.490, 0.240, ]	c16c_Model0_triplet_8_lamda5_1000
+[ 1  2  3 10  6  1  4] [0.282, 0.522, 0.858, 0.714, 0.633, 0.499, 0.249, ]	c16c_Model0_triplet_8_lamda10_1000
+[ 1  2  3 10  6  1  4] [0.247, 0.497, 0.835, 0.808, 0.614, 0.464, 0.255, ]	c16c_Model0_triplet_12_lamda1_1000
+[ 1  2  3 10  6  1  4] [0.287, 0.503, 0.853, 0.733, 0.625, 0.487, 0.229, ]	c16c_Model0_triplet_12_lamda5_1000
+[ 1  2  3 10  6  1  4] [0.294, 0.519, 0.856, 0.714, 0.619, 0.490, 0.246, ]	c16c_Model0_triplet_12_lamda10_1000
