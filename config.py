@@ -33,14 +33,14 @@ configuration ={
     # The default model configuration
     'default':{
         'dataset'           : 'cora',     # 'Dataset string. (cora | citeseer | pubmed | CIFAR-Fea | USPS-Fea)'
-        'train_size'        : 1,         # if train_size is a number, then use TRAIN_SIZE%% labels.
+#       'train_size'        : 1,         # if train_size is a number, then use TRAIN_SIZE%% labels.
         # 'train_size'        : [20, 20, 20, 20, 20, 20, 20], # if train_size is a list of numbers, then it specifies training lables for each class.
         'validation_size'   : 20,           # 'Use VALIDATION_SIZE% data to train model'
         'validate'          : False,        # Whether use validation set
         'conv'              : 'gcn',        # 'conv type. (gcn | cheby | chebytheta | gcn_rw | taubin)'
         'max_degree'        : 2,            # 'Maximum Chebyshev polynomial degree.'
         'learning_rate'     : 0.02,         # 'Initial learning rate.'
-        'epochs'            : 200,          # 'Number of epochs to train.'
+        'epochs'            : 300,          # 'Number of epochs to train.'
 
         # config the absorption probability
         'Model'             : 0,
@@ -58,11 +58,11 @@ configuration ={
         'Model_to_predict'  : { 'Model' :0 }, # for model 16
         'Model19'           : 'union',        # 'union' | 'intersection'
         'classifier'        : 'svm',            # 'svm' | 'tree'
-        'svm_kernel'        : 'rbf',        # 'rbf' | 'poly' | 'rbf' | 'sigmoid', model 23
+        'svm_kernel'        : 'rbf',        # 'rbf' | 'poly' | 'rbf' | 'sigmoid'， model 23
         'gamma'             : 1e-5,         # gamma for svm, see scikit-learn document, model 23
         'svm_degree'        : 4,
         'tree_depth'        : None,
-
+        'train_size'     : 1.0,
         'connection'        : 'cc',
         # A string contains only char "c" or "f" or "d".
         # "c" stands for convolution.
@@ -109,9 +109,16 @@ configuration ={
         'drop_inter_class_edge': False,
         'loss_func'         :'default',     #'imbalance'
         'ws_beta'           : 20,
+                
+        'max_triplet':1000,  #for cora
+        'triplet_lambda': 1,
+        'MARGIN':0.5,
+
+        'hard' : False, #hard1, 2, 3
+        'obj':'origin', #case1, 2, 3, 4 
+        'feature_normalize':'',
         
-        
-        'max_triplet':1000  #for cora
+        'M_margin':1.5, #for large_margin
     },
 
     # The list of model to be train.
@@ -123,54 +130,53 @@ configuration ={
             'connection'        : 'cc',
             'conv'              : 'gcn',
             'hard' : False,
-            'feature_normalize':False            
+            'obj':'origin'         
         }
-    ] +
-    [
-        {
-            'Model' : 0,
-            'connection'        : 'cc',
-            'conv'              : 'gcn',
-            'loss_func': 'triplet',
-            'MARGIN' : margin,
-            'triplet_lamda':triplet_lamda,
-            'hard' : False,
-            'feature_normalize':True
-        }  for margin in [4, 8, 12]
-        for triplet_lamda in [1, 5, 10]
-        
     ]+
+    #smoothing by 21, using original softmax loss func
     [
         {
-            'Model' : 0,
+            'Model'             : 0,
             'connection'        : 'cc',
             'conv'              : 'gcn',
-            'loss_func': 'triplet',
-            'MARGIN' : margin,
-            'triplet_lamda':triplet_lamda,
-            'hard' : False,
-            'feature_normalize':False,
-        } for margin in [4, 8, 12]
-        for triplet_lamda in [1, 5, 10]
-    ]
-#     
-#     +
-#     [
-#         {
-#             'Model' : 0,
-#             'connection'        : 'cc',
-#             'conv'              : 'gcn',
-#             'loss_func': 'triplet',
-#             'MARGIN' : margin,
-#             'triplet_lamda':1.0,
-#             'hard': True
-           
-#        } for margin in [0.1,0.2, 0.3, 0.4, 0.5]
-        
-#     ]
-#     
-   
-    
+            'smoothing'         : 'test21',
+            # 'loss_func'         : 'triplet',
+            # 'alpha'             : alpha, 
+            # 'beta'              : beta,
+            # 'triplet_lambda'    : triplet_lambda,
+            # 'MARGIN'            : 0.5,
+            'alpha'             : 0.3, 
+            'beta'              : 0.001,
+            # 'triplet_lambda'    : 5,
+            # 'hard'              : False,
+            # 'obj'               : 'case1'
+        }
+        # for alpha in [0.1, 0.2, 0.3, 0.4, 0.5]
+        # for beta in [0.001, 0.01, 0.05, 0.1]
+        # for triplet_lambda in[1, 5, 10]
+    ] +
+    #smoothhing by 21, using triplet loss func and hard selection
+    [
+        {
+            'Model'             : 0,
+            'connection'        : 'cc',
+            'conv'              : 'gcn',
+            'smoothing'         : 'test21',
+            'loss_func'         : 'triplet',
+            'alpha'             : alpha, 
+            'beta'              : beta,
+            'triplet_lambda'    : triplet_lambda,
+            'MARGIN'            : 2,
+            # 'alpha'             : 0.3, 
+            # 'beta'              : 0.001,
+            # 'triplet_lambda'    : 5,
+            'hard'              : hardType,
+            'obj'               : 'case1'
+        } for hardType in [False, 'hard1', 'hard2', 'hard3']
+          for alpha in [0.1, 0.3, 0.5]
+          for beta in [0.005, 0.01, 0.05]
+          for triplet_lambda in[2]
+    ]           
 }
 
 # Parse args

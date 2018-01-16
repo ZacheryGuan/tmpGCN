@@ -135,8 +135,8 @@ class FullyConnected(Layer):
 
         return self.act(output)
 
-
-class GraphConvolution(Layer):
+    
+class GraphConvolution_origin(Layer):
     """Graph convolution layer."""
 
     def __init__(self, input, output_dim, placeholders, dropout=0.,
@@ -207,7 +207,368 @@ class GraphConvolution(Layer):
                 support = dot(self.support[i], pre_sup, sparse=True)
                 supports.append(support)
  #           print(tf.sparse_tensor_to_dense(x))
-            return_no_w1 = tf.sparse_tensor_dense_matmul(self.support[i], pre_sup_2)
+            return_without_w1 = tf.sparse_tensor_dense_matmul(self.support[i], pre_sup_2)
+
+        if self.use_theta:
+            output = dot(H, dot(x, self.vars['weight'], sparse=self.sparse_inputs), sparse=True)
+        else:
+            output = tf.add_n(supports)
+
+        # bias
+        if self.bias:
+            output += self.vars['bias']
+        print('relu_flag', self.relu_flag)
+
+
+        if self.relu_flag==False:
+            return output, return_without_w1
+
+        return self.act(output)
+    
+    
+class GraphConvolution_case4(Layer):
+    """Graph convolution layer."""
+
+    def __init__(self, input, output_dim, placeholders, dropout=0.,
+                 sparse_inputs=False, act=tf.nn.relu, bias=False,
+                 featureless=False, use_theta=False, relu_flag=True, **kwargs):
+        super(self.__class__, self).__init__(input, **kwargs)
+
+        if dropout:
+            self.dropout = placeholders['dropout']
+        else:
+            self.dropout = 0.
+
+        input_dim = self.input_dim
+        self.act = act
+        self.support = placeholders['support']
+        self.sparse_inputs = sparse_inputs
+        self.featureless = featureless
+        self.bias = bias
+        self.use_theta = use_theta
+        # helper variable for sparse dropout
+        self.num_features_nonzero = placeholders['num_features_nonzero']
+        self.relu_flag=relu_flag
+ 
+        with tf.name_scope(self.name):
+            if use_theta:
+                self.vars['weight'] = glorot([input_dim, output_dim], name='weight')
+                for i in range(len(self.support)):
+                    self.vars['theta_' + str(i)] = tf.constant([1,-1,0][i], name='theta_' + str(i), dtype=tf.float32)
+                    # self.vars['theta_' + str(i)] = glorot((1,1), name='theta_' + str(i))
+            else:
+                for i in range(len(self.support)):
+                    # self.vars['weights_' + str(i)] = tf.Variable(np.ones([input_dim, output_dim], dtype=np.float32)*[1,-1,0][i], name='weights_' + str(i))
+                    self.vars['weights_' + str(i)] = glorot([input_dim, output_dim], name='weights_' + str(i))
+ 
+            if self.bias:
+                self.vars['bias'] = zeros([output_dim], name='bias')
+
+        if self.logging:
+            self._log_vars()
+
+    def _call(self):
+        x = self.input
+
+        # dropout
+        if self.sparse_inputs:
+            x = sparse_dropout(x, 1 - self.dropout, self.num_features_nonzero)
+        else:
+            x = tf.nn.dropout(x, 1 - self.dropout)
+
+        # convolve
+        supports = list()
+        H = None
+        for i in range(len(self.support)):
+            if self.use_theta:
+                if H != None:
+                    H = tf.sparse_add(H, self.support[i] * self.vars['theta_' + str(i)])
+                else:
+                    H = self.support[i] * self.vars['theta_' + str(i)]
+            else:
+                if not self.featureless:
+                    pre_sup = dot(x, self.vars['weights_' + str(i)],
+                                  sparse=self.sparse_inputs)
+          #          print(x.get_shape()[1])
+                    pre_sup_2 = dot(x, tf.eye(self.input_dim),
+                                  sparse=self.sparse_inputs)
+                else:
+                    pre_sup = self.vars['weights_' + str(i)]
+                support = dot(self.support[i], pre_sup, sparse=True)
+                supports.append(support)
+ #           print(tf.sparse_tensor_to_dense(x))
+            return_without_w1 = tf.sparse_tensor_dense_matmul(self.support[i], pre_sup_2)
+
+        if self.use_theta:
+            output = dot(H, dot(x, self.vars['weight'], sparse=self.sparse_inputs), sparse=True)
+        else:
+            output = tf.add_n(supports)
+
+        # bias
+        if self.bias:
+            output += self.vars['bias']
+        print('relu_flag', self.relu_flag)
+
+
+        if self.relu_flag==False:
+            return output, return_without_w1, self.vars['weights_0']
+
+        return self.act(output)
+    
+    
+class GraphConvolution_case1(Layer):
+    """Graph convolution layer."""
+
+    def __init__(self, input, output_dim, placeholders, dropout=0.,
+                 sparse_inputs=False, act=tf.nn.relu, bias=False,
+                 featureless=False, use_theta=False, relu_flag=True, **kwargs):
+        super(self.__class__, self).__init__(input, **kwargs)
+
+        if dropout:
+            self.dropout = placeholders['dropout']
+        else:
+            self.dropout = 0.
+
+        input_dim = self.input_dim
+        self.act = act
+        self.support = placeholders['support']
+        self.sparse_inputs = sparse_inputs
+        self.featureless = featureless
+        self.bias = bias
+        self.use_theta = use_theta
+        # helper variable for sparse dropout
+        self.num_features_nonzero = placeholders['num_features_nonzero']
+        self.relu_flag=relu_flag
+ 
+        with tf.name_scope(self.name):
+            if use_theta:
+                self.vars['weight'] = glorot([input_dim, output_dim], name='weight')
+                for i in range(len(self.support)):
+                    self.vars['theta_' + str(i)] = tf.constant([1,-1,0][i], name='theta_' + str(i), dtype=tf.float32)
+                    # self.vars['theta_' + str(i)] = glorot((1,1), name='theta_' + str(i))
+            else:
+                for i in range(len(self.support)):
+                    # self.vars['weights_' + str(i)] = tf.Variable(np.ones([input_dim, output_dim], dtype=np.float32)*[1,-1,0][i], name='weights_' + str(i))
+                    self.vars['weights_' + str(i)] = glorot([input_dim, output_dim], name='weights_' + str(i))
+ 
+            if self.bias:
+                self.vars['bias'] = zeros([output_dim], name='bias')
+
+        if self.logging:
+            self._log_vars()
+
+    def _call(self):
+        x = self.input
+
+        # dropout
+        if self.sparse_inputs:
+            x = sparse_dropout(x, 1 - self.dropout, self.num_features_nonzero)
+        else:
+            x = tf.nn.dropout(x, 1 - self.dropout)
+
+        # convolve
+        supports = list()
+        H = None
+        for i in range(len(self.support)):
+            if self.use_theta:
+                if H != None:
+                    H = tf.sparse_add(H, self.support[i] * self.vars['theta_' + str(i)])
+                else:
+                    H = self.support[i] * self.vars['theta_' + str(i)]
+            else:
+                if not self.featureless:
+                    pre_sup = dot(x, self.vars['weights_' + str(i)],
+                                  sparse=self.sparse_inputs)
+          #          print(x.get_shape()[1])
+                    pre_sup_2 = dot(x, tf.eye(self.input_dim),
+                                  sparse=self.sparse_inputs)
+                else:
+                    pre_sup = self.vars['weights_' + str(i)]
+                support = dot(self.support[i], pre_sup, sparse=True)
+                supports.append(support)
+ #           print(tf.sparse_tensor_to_dense(x))
+            return_without_w1 = tf.sparse_tensor_dense_matmul(self.support[i], pre_sup_2)
+
+        if self.use_theta:
+            output = dot(H, dot(x, self.vars['weight'], sparse=self.sparse_inputs), sparse=True)
+        else:
+            output = tf.add_n(supports)
+
+        # bias
+        if self.bias:
+            output += self.vars['bias']
+        print('relu_flag', self.relu_flag)
+
+
+        if self.relu_flag==False:
+            return output, return_without_w1
+
+        return self.act(output)
+
+class GraphConvolution_case2(Layer):
+    """Graph convolution layer."""
+
+    def __init__(self, input, output_dim, placeholders, dropout=0.,
+                 sparse_inputs=False, act=tf.nn.relu, bias=False,
+                 featureless=False, use_theta=False, relu_flag=True, **kwargs):
+        super(self.__class__, self).__init__(input, **kwargs)
+
+        if dropout:
+            self.dropout = placeholders['dropout']
+        else:
+            self.dropout = 0.
+
+        input_dim = self.input_dim
+        self.act = act
+        self.support = placeholders['support']
+        self.sparse_inputs = sparse_inputs
+        self.featureless = featureless
+        self.bias = bias
+        self.use_theta = use_theta
+        # helper variable for sparse dropout
+        self.num_features_nonzero = placeholders['num_features_nonzero']
+        self.relu_flag=relu_flag
+ 
+        with tf.name_scope(self.name):
+            if use_theta:
+                self.vars['weight'] = glorot([input_dim, output_dim], name='weight')
+                for i in range(len(self.support)):
+                    self.vars['theta_' + str(i)] = tf.constant([1,-1,0][i], name='theta_' + str(i), dtype=tf.float32)
+                    # self.vars['theta_' + str(i)] = glorot((1,1), name='theta_' + str(i))
+            else:
+                for i in range(len(self.support)):
+                    # self.vars['weights_' + str(i)] = tf.Variable(np.ones([input_dim, output_dim], dtype=np.float32)*[1,-1,0][i], name='weights_' + str(i))
+                    self.vars['weights_' + str(i)] = glorot([input_dim, output_dim], name='weights_' + str(i))
+ 
+            if self.bias:
+                self.vars['bias'] = zeros([output_dim], name='bias')
+
+        if self.logging:
+            self._log_vars()
+
+    def _call(self):
+        x = self.input
+
+        # dropout
+        if self.sparse_inputs:
+            x = sparse_dropout(x, 1 - self.dropout, self.num_features_nonzero)
+        else:
+            x = tf.nn.dropout(x, 1 - self.dropout)
+
+        # convolve
+        supports = list()
+        H = None
+        for i in range(len(self.support)):
+            if self.use_theta:
+                if H != None:
+                    H = tf.sparse_add(H, self.support[i] * self.vars['theta_' + str(i)])
+                else:
+                    H = self.support[i] * self.vars['theta_' + str(i)]
+            else:
+                if not self.featureless:
+                    pre_sup = dot(x, self.vars['weights_' + str(i)],
+                                  sparse=self.sparse_inputs)
+          #          print(x.get_shape()[1])
+                    pre_sup_2 = dot(x, tf.eye(self.input_dim),
+                                  sparse=self.sparse_inputs)
+                else:
+                    pre_sup = self.vars['weights_' + str(i)]
+                support = dot(self.support[i], pre_sup, sparse=True)
+                supports.append(support)
+ #           print(tf.sparse_tensor_to_dense(x))
+            return_without_w1 = tf.sparse_tensor_dense_matmul(self.support[i], pre_sup_2)
+
+        if self.use_theta:
+            output = dot(H, dot(x, self.vars['weight'], sparse=self.sparse_inputs), sparse=True)
+        else:
+            output = tf.add_n(supports)
+
+        # bias
+        if self.bias:
+            output += self.vars['bias']
+        print('relu_flag', self.relu_flag)
+
+
+        if self.relu_flag==False:
+            return output, return_without_w1
+
+        return self.act(output)
+    
+class GraphConvolution_case3(Layer):
+    """Graph convolution layer."""
+
+    def __init__(self, input, output_dim, placeholders, dropout=0.,
+                 sparse_inputs=False, act=tf.nn.relu, bias=False,
+                 featureless=False, use_theta=False, relu_flag=True, w1_gamma=1.0, **kwargs):
+        super(self.__class__, self).__init__(input, **kwargs)
+
+        if dropout:
+            self.dropout = placeholders['dropout']
+        else:
+            self.dropout = 0.
+
+        input_dim = self.input_dim
+        self.act = act
+        self.support = placeholders['support']
+        self.sparse_inputs = sparse_inputs
+        self.featureless = featureless
+        self.bias = bias
+        self.use_theta = use_theta
+        # helper variable for sparse dropout
+        self.num_features_nonzero = placeholders['num_features_nonzero']
+        self.relu_flag=relu_flag
+ 
+        with tf.name_scope(self.name):
+            if use_theta:
+                self.vars['weight'] = glorot([input_dim, output_dim], name='weight')
+                if self.relu_flag==False:
+                    self.vars['weight']=w1_gamma*tf.nn.l2_normalize(self.vars['weight'],0)
+                for i in range(len(self.support)):
+                    self.vars['theta_' + str(i)] = tf.constant([1,-1,0][i], name='theta_' + str(i), dtype=tf.float32)
+                    # self.vars['theta_' + str(i)] = glorot((1,1), name='theta_' + str(i))
+            else:
+                for i in range(len(self.support)):
+                    # self.vars['weights_' + str(i)] = tf.Variable(np.ones([input_dim, output_dim], dtype=np.float32)*[1,-1,0][i], name='weights_' + str(i))
+                    self.vars['weights_' + str(i)] = glorot([input_dim, output_dim], name='weights_' + str(i))
+                    if self.relu_flag==False:
+                        self.vars['weights_' + str(i)]=w1_gamma*tf.nn.l2_normalize(self.vars['weights_' + str(i)],0)
+            if self.bias:
+                self.vars['bias'] = zeros([output_dim], name='bias')
+
+        if self.logging:
+            self._log_vars()
+
+    def _call(self):
+        x = self.input
+
+        # dropout
+        if self.sparse_inputs:
+            x = sparse_dropout(x, 1 - self.dropout, self.num_features_nonzero)
+        else:
+            x = tf.nn.dropout(x, 1 - self.dropout)
+
+        # convolve
+        supports = list()
+        H = None
+        for i in range(len(self.support)):
+            if self.use_theta:
+                if H != None:
+                    H = tf.sparse_add(H, self.support[i] * self.vars['theta_' + str(i)])
+                else:
+                    H = self.support[i] * self.vars['theta_' + str(i)]
+            else:
+                if not self.featureless:
+                    pre_sup = dot(x, self.vars['weights_' + str(i)],
+                                  sparse=self.sparse_inputs)
+          #          print(x.get_shape()[1])
+                    pre_sup_2 = dot(x, tf.eye(self.input_dim),
+                                  sparse=self.sparse_inputs)
+                else:
+                    pre_sup = self.vars['weights_' + str(i)]
+                support = dot(self.support[i], pre_sup, sparse=True)
+                supports.append(support)
+ #           print(tf.sparse_tensor_to_dense(x))
+            return_without_w1 = tf.sparse_tensor_dense_matmul(self.support[i], pre_sup_2)
 
         if self.use_theta:
             output = dot(H, dot(x, self.vars['weight'], sparse=self.sparse_inputs), sparse=True)
@@ -221,10 +582,11 @@ class GraphConvolution(Layer):
 
 #        return self.act(output), self.act(output)
         if self.relu_flag==False:
-            return output, return_no_w1
+            return output, return_without_w1
 
         return self.act(output)
-
+        
+    
 class Residual(Layer):
     """Dense layer."""
 

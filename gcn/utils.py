@@ -17,6 +17,10 @@ import os
 import time
 import random
 
+#def l2_normalize(features):
+ #   row_sums = np.sum(np.array(features)**2, axis=1)
+  #  new_features = features/np.sqrt(np.maximum(row_sums, 1e-12))
+
 def save_sparse_csr(filename, array):
     np.savez(filename, data=array.data, indices=array.indices,
              indptr=array.indptr, shape=array.shape)
@@ -150,7 +154,7 @@ def get_triplet_hard(features, y_train, train_mask, max_triplets):
             for k, pairs in enumerate(negatives):
                 dist = np.inf
                 value_n = 0
-                if pairs == None:
+                if pairs == []:
                     continue
                 for value,label in pairs:
                     dist_current = eucldist_vectorized(features[value,:], features[input_index[0],:])
@@ -159,6 +163,7 @@ def get_triplet_hard(features, y_train, train_mask, max_triplets):
                         dist = dist_current
                         
                 negatives_filter.append(value_n) 
+ #           print('negative_filter', negatives_filter)    
             n_triplets = min(max_triplets, len(negatives_filter))
 
             negatives_filter = random.sample(list(negatives_filter), n_triplets)
@@ -195,7 +200,7 @@ def get_triplet_hard(features, y_train, train_mask, max_triplets):
             for k, pairs in enumerate(negatives):
                 dist = np.inf
                 value_n = 0
-                if pairs == None:
+                if pairs == []:
                     continue
                 for value,label in pairs:
                     dist_current = eucldist_vectorized(features[value,:], features[input_index[0],:])
@@ -309,13 +314,13 @@ def load_data(dataset_str, train_size, validation_size, model_config):
 #        print('idx', idx)
         no_class = labels.shape[1]  # number of class
         validation_size = validation_size * len(idx) // 100
- #       if True or hasattr(train_size, '__getitem__'):
+  #      if True or hasattr(train_size, '__getitem__'):
         if hasattr(train_size, '__getitem__'):
             np.random.shuffle(idx)
             idx_train = []
             count = [0 for i in range(no_class)]
-            label_each_class = train_size
-#            label_each_class = [4,4,4,4,4,4,4]
+#            label_each_class = train_size
+            label_each_class = [1,1,1,1,1,1,1]
 #            print('label_each_class', label_each_class)
             for i in idx:
                 for j in range(no_class):
@@ -365,12 +370,18 @@ def load_data(dataset_str, train_size, validation_size, model_config):
 #    print('train_mask', train_mask)
 #    triplet = get_triplet(y_train, train_mask, model_config['max_triplet'])
 #    print('features', features.shape)
-    if model_config['hard']==True:
-        triplet = get_triplet_hard(features, y_train, train_mask, model_config['max_triplet'])
-        print('hard', triplet.shape)
-    else:
+    if model_config['hard']==False:
         triplet = get_triplet( y_train, train_mask, model_config['max_triplet'])
         print('not hard', triplet.shape)
+    if model_config['hard']=='hard1':
+        triplet = get_triplet_hard(features, y_train, train_mask, model_config['max_triplet'])
+        print('hard1', triplet.shape)
+    if model_config['hard']=='hard2':
+        triplet = get_triplet_hard(preprocess_features(features, feature_type=model_config['feature']), y_train, train_mask, model_config['max_triplet'])
+        print('hard2', triplet.shape)
+    if model_config['hard']=='hard3':
+        triplet = get_triplet_hard(normalize(features, norm='l2', axis=1), y_train, train_mask, model_config['max_triplet'])
+        print('hard3', triplet.shape)
     return adj, features, y_train, y_val, y_test, train_mask, val_mask, test_mask, size_of_each_class, triplet
 
 
@@ -1390,16 +1401,38 @@ def preprocess_model_config(model_config):
             
             
         if model_config['loss_func'] == 'triplet': 
-            if model_config['hard']==True:
-                if model_config['feature_normalize']==True:
-                    model_name+='_triplet_'+str(model_config['MARGIN'])+'_lamda'+str(model_config['triplet_lamda'])+'_'+ str(model_config['max_triplet'])+'_hard'+'_feature_normalize'
-                else:
-                    model_name+='_triplet_'+str(model_config['MARGIN'])+'_lamda'+str(model_config['triplet_lamda'])+'_'+ str(model_config['max_triplet'])+'hard'
-            else:
-                if model_config['feature_normalize']==True:
-                    model_name+='_triplet_'+str(model_config['MARGIN'])+'_lamda'+str(model_config['triplet_lamda'])+'_'+ str(model_config['max_triplet'])+'_feature_normalize'
-                else:
-                    model_name+='_triplet_'+str(model_config['MARGIN'])+'_lamda'+str(model_config['triplet_lamda'])+'_'+ str(model_config['max_triplet'])
+            if model_config['hard']==False:
+                if model_config['obj']=='case1':
+                                                model_name+='_case1'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_not_hard'
+                if model_config['obj']=='case2':
+                                                model_name+='_case2'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_not_hard'
+                if model_config['obj']=='case3':
+                                                model_name+='_case3'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_w1_gamma_'+str(model_config['w1_gamma'])+'_not_hard'
+
+            if model_config['hard']=='hard1':
+                if model_config['obj']=='case1':
+                                                model_name+='_case1'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_hard1'
+                if model_config['obj']=='case2':
+                                                model_name+='_case2'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_hard1'
+                if model_config['obj']=='case3':
+                                                model_name+='_case3'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_w1_gamma_'+str(model_config['w1_gamma'])+'_hard1'
+            if model_config['hard']=='hard2':
+                if model_config['obj']=='case1':
+                                                model_name+='_case1'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_hard2'
+                if model_config['obj']=='case2':
+                                                model_name+='_case2'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_hard2'
+                if model_config['obj']=='case3':
+                                                model_name+='_case3'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_w1_gamma_'+str(model_config['w1_gamma'])+'_hard2'
+            if model_config['hard']=='hard3':
+                if model_config['obj']=='case1':
+                                                model_name+='_case1'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_hard3'
+                if model_config['obj']=='case2':
+                                                model_name+='_case2'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_hard3'
+                if model_config['obj']=='case3':
+                                                model_name+='_case3'+'_triplet_'+'margin_'+str(model_config['MARGIN'])+'_lambda'+str(model_config['triplet_lambda'])+'_'+ str(model_config['max_triplet'])+'_w1_gamma_'+str(model_config['w1_gamma'])+'_hard3'
+        if model_config['loss_func'] == 'large_margin':
+            model_name+='_case4'+'_large_margin_'+str(model_config['M_margin'])
+
 
 
         model_config['name'] = model_name

@@ -12,7 +12,7 @@ from gcn.utils import construct_feed_dict, preprocess_features, drop_inter_class
     preprocess_adj, chebyshev_polynomials, load_data, sparse_to_tuple, \
     Model1, Model2, Model3, Model4, Model5, Model6, Model7, Model8, Model9, \
     Model10, Model11, Model12, Model16, Model17, Model19, Model20, Model22, taubin_smoothor, smooth, Model26
-from gcn.models import GCN_MLP
+from gcn.models import GCN_MLP_case1, GCN_MLP_case2, GCN_MLP_case3, GCN_MLP_origin, GCN_MLP_case4
 
 from config import configuration, args
 import sys
@@ -266,8 +266,16 @@ def train(model_config, sess, seed, data_split = None):
 
     weight=size_of_each_class
     # Create model
-    model = GCN_MLP(model_config, placeholders, input_dim=features[2][1])
-
+    if model_config['obj']=='case1':
+        model = GCN_MLP_case1(model_config, placeholders, input_dim=features[2][1])
+    if model_config['obj']=='case2':
+        model = GCN_MLP_case2(model_config, placeholders, input_dim=features[2][1])
+    if model_config['obj']=='case3':
+        model = GCN_MLP_case3(model_config, placeholders, input_dim=features[2][1])
+    if model_config['obj']=='origin':
+        model = GCN_MLP_origin(model_config, placeholders, input_dim=features[2][1])
+    if model_config['obj']=='case4':
+        model = GCN_MLP_case4(model_config, placeholders, input_dim=features[2][1])
     # Random initialize
     sess.run(tf.global_variables_initializer())
 
@@ -302,6 +310,7 @@ def train(model_config, sess, seed, data_split = None):
     # projector.visualize_embeddings(train_writer, projector_config)
 
     # Construct feed dictionary
+#    print('y_train',y_train)
     train_feed_dict = construct_feed_dict(features, support, y_train, train_mask, triplet, placeholders)
     train_feed_dict.update({placeholders['dropout']: model_config['dropout']})
     valid_feed_dict = construct_feed_dict(features, support, y_val, val_mask, triplet, placeholders)
@@ -357,8 +366,8 @@ def train(model_config, sess, seed, data_split = None):
                     f.write(timeline.Timeline(run_metadata.step_stats).generate_chrome_trace_format())
             else:
                 sess.run(model.opt_op, feed_dict=train_feed_dict)
-            train_loss, train_acc, train_summary = sess.run(
-                [model.loss, model.accuracy, model.summary],
+            train_loss, train_loss1, train_loss2, train_acc, train_summary = sess.run(
+                [model.loss, model.loss1, model.loss2, model.accuracy, model.summary],
                 feed_dict=train_feed_dict)
 
             # Validation
@@ -375,7 +384,7 @@ def train(model_config, sess, seed, data_split = None):
 
             # If it's best performence so far, evalue on test set
             if model_config['validate']:
-                if valid_acc > max_valid_acc:
+                if valid_acc >= max_valid_acc:
                     max_valid_acc = valid_acc
                     t_test = time.time()
                     test_cost, test_acc, test_acc_of_class = sess.run(
@@ -384,7 +393,7 @@ def train(model_config, sess, seed, data_split = None):
                     test_duration = time.time() - t_test
                     prediction = sess.run(model.prediction,train_feed_dict)
             else:
-                if train_acc > max_train_acc:
+                if train_acc >= max_train_acc:
                     max_train_acc = train_acc
                     t_test = time.time()
                     test_cost, test_acc, test_acc_of_class = sess.run(
@@ -397,6 +406,8 @@ def train(model_config, sess, seed, data_split = None):
             if args.verbose:
                 print("Epoch: {:04d}".format(global_step),
                       "train_loss= {:.3f}".format(train_loss),
+                      "train_loss1= {:.3f}".format(train_loss1),
+                      "train_loss2= {:.3f}".format(train_loss2),
                       "train_acc= {:.3f}".format(train_acc),
                       "val_loss=", "{:.3f}".format(valid_loss),
                       "val_acc= {:.3f}".format(valid_acc),

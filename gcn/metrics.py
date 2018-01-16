@@ -33,10 +33,33 @@ def compute_triplet_loss(anchor_feature, positive_feature, negative_feature, mar
         #loss = d_p_squared - d_n_squared + margin
 
         return tf.reduce_mean(loss), tf.reduce_mean(d_p_squared), tf.reduce_mean(d_n_squared)
+
+
+
+def triplet_case1_softmax_cross_entropy(preds, return_without_w1, labels, triplet, mask, MARGIN, triplet_lamda):
+    """Softmax cross-entropy loss with masking."""
+    #origin
+    loss1 = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels)
+#    train_anchor = preds[triplet[:,0],:]
+ #   train_positive = preds[triplet[:,1],:]
+  #  train_negative = preds[triplet[:,2],:]
+    anchor, positive, negative = tf.unstack(triplet, 3, axis = 1)
+    train_anchor = tf.gather(return_without_w1, anchor)
+    train_positive = tf.gather(return_without_w1, positive)
+    train_negative = tf.gather(return_without_w1, negative)
+    loss_triple, positives, negatives = compute_triplet_loss(train_anchor, train_positive, train_negative, MARGIN)
+ #   print('loss_triple', loss_triple)
+    mask = tf.cast(mask, dtype=tf.float32)
+    mask /= tf.reduce_mean(mask)
+    loss2 = triplet_lamda*loss_triple
+    loss = loss1 + loss2
+    loss *= mask
+    loss1_mask = loss1*mask
+    loss2_mask = loss2*mask
     
+    return tf.reduce_mean(loss), tf.reduce_mean(loss1_mask), tf.reduce_mean(loss2_mask)
 
-
-def triplet_softmax_cross_entropy(preds, labels, triplet, mask, MARGIN, triplet_lamda):
+def triplet_case2_softmax_cross_entropy(preds, return_without_w1, labels, triplet, mask, MARGIN, triplet_lamda):
     """Softmax cross-entropy loss with masking."""
     #origin
     loss = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels)
@@ -44,9 +67,9 @@ def triplet_softmax_cross_entropy(preds, labels, triplet, mask, MARGIN, triplet_
  #   train_positive = preds[triplet[:,1],:]
   #  train_negative = preds[triplet[:,2],:]
     anchor, positive, negative = tf.unstack(triplet, 3, axis = 1)
-    train_anchor = tf.gather(preds, anchor)
-    train_positive = tf.gather(preds, positive)
-    train_negative = tf.gather(preds, negative)
+    train_anchor = tf.gather(return_without_w1, anchor)
+    train_positive = tf.gather(return_without_w1, positive)
+    train_negative = tf.gather(return_without_w1, negative)
     loss_triple, positives, negatives = compute_triplet_loss(train_anchor, train_positive, train_negative, MARGIN)
     mask = tf.cast(mask, dtype=tf.float32)
     mask /= tf.reduce_mean(mask)
@@ -55,7 +78,7 @@ def triplet_softmax_cross_entropy(preds, labels, triplet, mask, MARGIN, triplet_
     
     return tf.reduce_mean(loss)
 
-def triplet_normalize_softmax_cross_entropy(preds, labels, triplet, mask, MARGIN, triplet_lamda):
+def triplet_case3_softmax_cross_entropy(preds, return_without_w1, labels, triplet, mask, MARGIN, triplet_lamda):
     """Softmax cross-entropy loss with masking."""
     #origin
     loss = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels)
@@ -63,10 +86,9 @@ def triplet_normalize_softmax_cross_entropy(preds, labels, triplet, mask, MARGIN
  #   train_positive = preds[triplet[:,1],:]
   #  train_negative = preds[triplet[:,2],:]
     anchor, positive, negative = tf.unstack(triplet, 3, axis = 1)
-    preds = tf.nn.l2_normalize(preds, 1)
-    train_anchor = tf.gather(preds, anchor)
-    train_positive = tf.gather(preds, positive)
-    train_negative = tf.gather(preds, negative)
+    train_anchor = tf.gather(return_without_w1, anchor)
+    train_positive = tf.gather(return_without_w1, positive)
+    train_negative = tf.gather(return_without_w1, negative)
     loss_triple, positives, negatives = compute_triplet_loss(train_anchor, train_positive, train_negative, MARGIN)
     mask = tf.cast(mask, dtype=tf.float32)
     mask /= tf.reduce_mean(mask)
@@ -75,47 +97,11 @@ def triplet_normalize_softmax_cross_entropy(preds, labels, triplet, mask, MARGIN
     
     return tf.reduce_mean(loss)
 
-def triplet_no_w1_softmax_cross_entropy(preds, return_no_w1, labels, triplet, mask, MARGIN, triplet_lamda):
-    """Softmax cross-entropy loss with masking."""
-    #origin
-    loss = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels)
-#    train_anchor = preds[triplet[:,0],:]
- #   train_positive = preds[triplet[:,1],:]
-  #  train_negative = preds[triplet[:,2],:]
-    anchor, positive, negative = tf.unstack(triplet, 3, axis = 1)
-    train_anchor = tf.gather(return_no_w1, anchor)
-    train_positive = tf.gather(return_no_w1, positive)
-    train_negative = tf.gather(return_no_w1, negative)
-    loss_triple, positives, negatives = compute_triplet_loss(train_anchor, train_positive, train_negative, MARGIN)
-    mask = tf.cast(mask, dtype=tf.float32)
-    mask /= tf.reduce_mean(mask)
-    loss = loss + triplet_lamda*loss_triple
-    loss *= mask
-    
-    return tf.reduce_mean(loss)
 
-def triplet_no_w1_normalize_softmax_cross_entropy(preds, return_no_w1, labels, triplet, mask, MARGIN, triplet_lamda):
-    """Softmax cross-entropy loss with masking."""
-    #origin
-    loss = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels)
-#    train_anchor = preds[triplet[:,0],:]
- #   train_positive = preds[triplet[:,1],:]
-  #  train_negative = preds[triplet[:,2],:]
-    anchor, positive, negative = tf.unstack(triplet, 3, axis = 1)
-    return_no_w1 = tf.nn.l2_normalize(return_no_w1, 1)
-    train_anchor = tf.gather(return_no_w1, anchor)
-    train_positive = tf.gather(return_no_w1, positive)
-    train_negative = tf.gather(return_no_w1, negative)
-    loss_triple, positives, negatives = compute_triplet_loss(train_anchor, train_positive, train_negative, MARGIN)
-    mask = tf.cast(mask, dtype=tf.float32)
-    mask /= tf.reduce_mean(mask)
-    loss = loss + triplet_lamda*loss_triple
-    loss *= mask
-    
-    return tf.reduce_mean(loss)
+
+
 
 def weighted_softmax_cross_entropy(preds, labels, beta):
-    print('A')
     # S = mask.reduce_sum(axis=0)
     # Sm = S.max()
     # S = (Sm-S)/beta*Sm + 1
@@ -123,7 +109,7 @@ def weighted_softmax_cross_entropy(preds, labels, beta):
     y=tf.nn.softmax(preds)
     y_=tf.cast(labels, dtype=tf.float32)
     cross_entropy = y_ * tf.log(y)
-#    print('cross_entropy', cross_entropy.shape)
+    # print('cross_entropy', cross_entropy.shape)
 
     #build weight matrix
     sum = tf.reduce_sum(labels, axis=0)   #sum by row
@@ -134,15 +120,41 @@ def weighted_softmax_cross_entropy(preds, labels, beta):
 
     #calculate weighted-cross-entropy
     w_cross_entropy = weighted * cross_entropy
-#    print('w_cross_entropy',w_cross_entropy.shape)
+    # print('w_cross_entropy',w_cross_entropy.shape)
     loss=-1*tf.reduce_sum(w_cross_entropy, axis=1)
-    print(loss)
     return tf.reduce_mean(loss)
+
 
 def masked_softmax_cross_entropy(preds, labels, mask):
     """Softmax cross-entropy loss with masking."""
     #origin
     loss = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels) 
+    mask = tf.cast(mask, dtype=tf.float32)
+    mask /= tf.reduce_mean(mask)
+    loss *= mask
+    return tf.reduce_mean(loss)
+
+def fi(m_margin, theta):
+    k = tf.floor(theta*m_margin/np.pi)
+    return tf.pow(-1.0, k)*tf.cos(m_margin*theta)-2.0*k
+
+def margin_loss(x,w, m_margin):
+    xnorm = tf.sqrt(tf.reduce_sum(tf.pow(x, 2.0), 1)+1e-6) #(batch_size,)
+    wnorm = tf.sqrt(tf.reduce_sum(tf.pow(w, 2.0), 0)+1e-6) #(c,)
+    prod = tf.matmul(x, w) #(nxc)
+    dot = tf.matmul(tf.expand_dims(xnorm, 1), tf.expand_dims(wnorm, 0)) #(nxc)
+    theta = tf.acos(prod/(dot+1e-6))
+    down = tf.reduce_sum(tf.exp(prod), 1) #nx1
+    up = tf.exp(dot*fi(m_margin, theta)) # nxc
+    res = up/(tf.stack([down]*int(w.shape[1]), 1)-tf.exp(prod)+up) #nxc
+    res = -tf.log(res+1e-6) #nxc
+    return res
+    
+def large_margin_softmax_cross_entropy(return_without_w1, w1, labels, mask, m_margin):
+    """Softmax cross-entropy loss with masking."""
+    #origin
+    res = margin_loss(return_without_w1,w1,m_margin)
+    loss = tf.reduce_sum(res*tf.cast(labels, dtype=tf.float32),1)
     mask = tf.cast(mask, dtype=tf.float32)
     mask /= tf.reduce_mean(mask)
     loss *= mask
